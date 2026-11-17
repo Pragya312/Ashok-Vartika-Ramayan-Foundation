@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Vatika Ramayan Foundation - Vision, Concept & Itinerary</title>
+    <!-- FontAwesome Icons & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #c9933b; /* Image ke map ka exact color */
+            color: #333; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.8; 
+            text-align: left;
+        }
+        
+        /* Full Header Image Container - No Crop */
+        .header-image-container { 
+            width: 100%;
+            background-color: #c9933b;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .full-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto 30px auto; 
+            padding: 0 20px; 
+        }
+
+        /* Title Card - Text below Full Image */
+        .main-title-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+            text-align: center;
+            border-top: 5px solid #ff6600;
+        }
+
+        .header-subtitle { 
+            letter-spacing: 1.5px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            font-size: 0.85rem; 
+            background: #fff3e6; 
+            color: #ff6600;
+            display: inline-block; 
+            padding: 6px 18px; 
+            border-radius: 20px; 
+            margin-bottom: 10px;
+        }
+
+        .main-title-card h1 { 
+            font-family: 'Cinzel', serif; 
+            margin: 10px 0; 
+            font-size: 2.2rem; 
+            color: #ff6600;
+            line-height: 1.3;
+        }
+
+        .main-title-card p { 
+            margin: 10px auto 0 auto; 
+            font-size: 0.95rem; 
+            color: #555;
+            max-width: 800px;
+        }
+        
+        .back-btn { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 20px; 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.95rem; 
+            background: rgba(0, 0, 0, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+        .back-btn:hover { background: rgba(0, 0, 0, 0.35); }
+        
+        /* Main Card Container Alignment */
+        .content-card { 
+            background: white; 
+            padding: 35px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06); 
+            margin-bottom: 30px; 
+            border-top: 5px solid #ff6600; 
+        }
+        .section-title { 
+            font-family: 'Cinzel', serif; 
+            color: #ff6600; 
+            margin-top: 0; 
+            font-size: 1.5rem; 
+            border-bottom: 2px solid #ffe6cc; 
+            padding-bottom: 12px; 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            text-align: left;
+        }
+        
+        /* Grids & Boxes Alignment */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-top: 20px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 20px; }
+        
+        .info-box { 
+            background: #fff3e6; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-left: 4px solid #ff6600; 
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .info-box h4 { margin: 0 0 8px 0; color: #ff6600; font-size: 1rem; }
+        .info-box p { margin: 0; font-size: 0.88rem; line-height: 1.6; color: #444; }
+
+        .concept-card { 
+            background: #fdfaf6; 
+            border: 1px solid #ffe6cc; 
+            border-radius: 10px; 
+            padding: 22px; 
+            border-top: 3px solid #ff6600; 
+            text-align: left;
+        }
+        .concept-card h4 { 
+            color: #ff6600; 
+            margin-top: 0; 
+            font-size: 1.05rem; 
+            border-bottom: 1px dashed #ffd1a4; 
+            padding-bottom: 8px; 
+            margin-bottom: 12px;
+        }
+        .concept-card ul { padding-left: 20px; margin: 0; font-size: 0.88rem; color: #444; }
+        .concept-card li { margin-bottom: 8px; }
+
+        /* Itinerary Cards Alignment */
+        .day-card { 
+            background: #ffffff; 
+            border-radius: 10px; 
+            padding: 25px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06); 
+            border-left: 6px solid #ff6600; 
+            margin-bottom: 20px; 
+            text-align: left;
+        }
+        .day-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            gap: 12px;
+            border-bottom: 1px solid #eee; 
+            padding-bottom: 12px; 
+            margin-bottom: 15px; 
+        }
+        .day-header h3 { display: flex; align-items: center; gap: 10px; }
+        .badge { 
+            background: #ffe6cc; 
+            color: #ff6600; 
+            padding: 5px 14px; 
+            border-radius: 15px; 
+            font-weight: 600; 
+            font-size: 0.85rem; 
+            display: inline-block;
+        }
+        .day-card ul { margin: 0; padding-left: 20px; color: #444; }
+        .day-card li { margin-bottom: 8px; font-size: 0.95rem; }
+        
+        /* Slogan Banner */
+        .slogan-banner { 
+            background: linear-gradient(135deg, #ffe6cc, #ffd1a4); 
+            border: 2px dashed #ff6600; 
+            border-radius: 12px; 
+            padding: 25px 20px; 
+            text-align: center; 
+            margin: 35px 0; 
+        }
+        .slogan-banner h3 { margin: 0; color: #ff6600; font-family: 'Cinzel', serif; font-size: 1.35rem; line-height: 1.4; }
+        .slogan-banner p { margin: 10px 0 0 0; font-weight: 600; color: #444; font-size: 1rem; }
+
+        /* Contact Section Alignment */
+        .contact-card {
+            background: #ffffff; 
+            border-radius: 12px; 
+            padding: 30px 20px; 
+            border: 2px dashed #ff6600; 
+            text-align: center; 
+            margin-top: 30px;
+        }
+        .contact-container {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            gap: 20px; 
+            flex-wrap: wrap; 
+            margin-top: 20px;
+        }
+        .contact-box {
+            background: #fff3e6; 
+            padding: 16px 24px; 
+            border-radius: 8px; 
+            min-width: 260px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .main-title-card h1 { font-size: 1.5rem; }
+            .content-card, .day-card { padding: 20px; }
+            .day-header { flex-direction: column; align-items: flex-start; }
+            .section-title { font-size: 1.3rem; }
+        }
+    </style>
+    <!-- Day Cards CSS Styles -->
+<style>
+    .day-card { 
+        background: #ffffff; 
+        border-radius: 10px; 
+        padding: 25px; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.06); 
+        border-left: 6px solid #ff6600; 
+        margin-bottom: 25px; 
+        text-align: left;
+    }
+    
+    .day-header { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        flex-wrap: wrap; 
+        gap: 12px;
+        border-bottom: 1px solid #eee; 
+        padding-bottom: 12px; 
+        margin-bottom: 15px; 
+    }
+    
+    .day-body {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    /* Alternate Image Layout Styles */
+    .day-body.row-normal {
+        flex-direction: row; /* Left: Text | Right: Image */
+    }
+
+    .day-body.row-reverse {
+        flex-direction: row-reverse; /* Left: Image | Right: Text */
+    }
+
+    .day-content {
+        flex: 1;
+    }
+
+    .day-content ul {
+        margin: 0;
+        padding-left: 20px;
+        color: #444;
+    }
+
+    .day-content li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+    }
+
+    .day-image {
+        width: 320px;
+        min-width: 250px;
+        height: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        flex-shrink: 0;
+    }
+
+    .day-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Mobile Responsive Layout */
+    @media (max-width: 768px) {
+        .day-body.row-normal,
+        .day-body.row-reverse {
+            flex-direction: column !important;
+        }
+        .day-image {
+            width: 100%;
+            height: 200px;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <!-- FULL UNCROPPED BANNER IMAGE -->
+    <div class="header-image-container">
+        <img src="yatra-bg1.jpeg" alt="Sri Lanka Ramayana Corridor Banner" class="full-banner-img">
+    </div>
+
+    <div class="container">
+        
+        <!-- Back Button -->
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Main Website</a>
+
+        <!-- TEXT BELOW THE FULL IMAGE -->
+        <div class="main-title-card">
+            <span class="header-subtitle">
+                Ashok Vatika Ramayan Foundation, Delhi(NCR)
+            </span>
+            <h1>Sri Lanka Ramayana Corridor & Pilgrimage Tour</h1>
+            <p>Affiliated with Rashtriya Seva Samvardhan Samiti...</p>
+        </div>
+
+        <!-- 0. YATRA INTRODUCTION SECTION -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> RAMAYAN CORRIDOR Introduction</h2>
+            <p style="font-size: 0.98rem; color: #444; margin-bottom: 20px; text-align: justify;">
+                This specially curated Ramayana Corridor Exposure Visit is designed for public representatives' families, offering a unique opportunity to experience the deep spiritual and cultural ties between India and Sri Lanka.
+            </p>
+
+            <h3 style="color: #ff6600; font-size: 1.1rem; margin-top: 20px; text-align: left;">Key Aspects of Importance:</h3>
+            <ul style="padding-left: 20px; font-size: 0.95rem; color: #444; line-height: 1.8;">
+                <li style="margin-bottom: 10px;"><strong>Shared Cultural & Spiritual Ties:</strong> The Ramayana serves as a civilizational bridge connecting both nations. Exposure visits to sites like Seetha Amman Temple and Ashok Vatika foster a shared cultural consciousness.</li>
+                <li style="margin-bottom: 10px;"><strong>Ramayana Trail Development:</strong> The visits help in developing the Ramayana trail as a specialized tourism circuit, aiding tourism stakeholders in both countries to understand and market the product efficiently, according to insights from the High Commission of Sri Lanka in India.</li>
+                <li><strong>Strengthening Friendship & Socio-Economic Opportunities:</strong> Shared heritage is a key aspect of "soft power," and such visits facilitate stronger economic and socio-political relationships, as seen in the India-Sri Lanka Socio-Economic Partnership Vision.</li>
+            </ul>
+
+            <div style="background: #fff3e6; padding: 16px 20px; border-radius: 8px; margin-top: 20px; border-left: 4px solid #ff6600; text-align: left;">
+                <p style="margin: 0; font-size: 0.92rem; font-style: italic; color: #555;">
+                    This journey is more than a pilgrimage; it is a meaningful cultural exchange & Spiritual ties, fostering a deeper understanding of shared heritage, strengthening people-to-people connections, and celebrating the timeless legacy of the Ramayana across borders.
+                </p>
+            </div>
+        </div>
+
+        <!-- 1. VISION DOCUMENT 2030 SECTION -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-eye"></i> Vision Document 2030 & Core Philosophy</h2>
+            <p style="margin-bottom: 15px;">
+                <strong>Motto:</strong> <em>Seva Dharmah Parama Gahanah</em> (The Virtue of Service is Deep and Sublime)<br>
+                The Ramayana is not merely a story; it is a philosophy of living. Mata Sita is the soul of this philosophy.
+            </p>
+
+            <h3 style="color: #ff6600; font-size: 1.1rem; margin-top: 25px; text-align: left;">Four Pillars of Ramayana Philosophy:</h3>
+            <div class="grid-4">
+                <div class="info-box">
+                    <h4>1. Maryada Darshan</h4>
+                    <p>Righteous restraint; Shri Ram ruled within boundaries; Mata Sita endured hardships with dignity. Teaching youth that freedom requires discipline.</p>
+                </div>
+                <div class="info-box">
+                    <h4>2. Tyaga Darshan</h4>
+                    <p>Spirit of sacrifice without complaint. From palace to exile and Ashok Vatika, Mata Sita made selfless sacrifices, inspiring youth to achieve greatness.</p>
+                </div>
+                <div class="info-box">
+                    <h4>3. Seva Darshan</h4>
+                    <p>Selfless service modeled by Hanuman Ji, Bharat Ji, and Laxman Ji. Service as the highest duty—the core principle of VHP.</p>
+                </div>
+                <div class="info-box">
+                    <h4>4. Samrasata Darshan</h4>
+                    <p>Social harmony; connecting Nishadraj, Shabari Mata, and the Vanar Sena. Uniting society beyond caste barriers.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT CONCEPT NOTE: SRI LANKA RAMAYANA CORRIDOR -->
+        <div class="content-card">
+            <h2 class="section-title"><i class="fas fa-gopuram"></i> Project Concept Note: Sri Lanka Ramayana Corridor</h2>
+            <p style="font-size: 1.05rem; font-weight: 600; color: #ff6600; margin-bottom: 20px;">
+                Ashok Vatika Temple Renovation & India-Sri Lanka Cultural Bridge
+            </p>
+            
+            <div style="background: #fdfaf6; border: 1px solid #ffe6cc; padding: 20px; border-radius: 8px; margin-bottom: 25px; text-align: left;">
+                <h3 style="color: #ff6600; margin-top: 0; font-size: 1.05rem;">1. Background – Why Sri Lanka?</h3>
+                <p style="margin: 0; font-size: 0.92rem; color: #444; text-align: justify;">
+                    Sri Lanka hosts 52 Ramayana-related heritage sites. Among them, the most sacred is <strong>Ashok Vatika (Seetha Eliya)</strong>, where Mata Sita endured 14 months of captivity with patience in Ravana's Lanka. Currently, the temple is small, amenities are limited, and proper arrangements for Indian devotees are lacking. Under the guidance of the Vishva Hindu Parishad (VHP), our foundation aims to develop this sacred site into a world-class pilgrimage hub.
+                </p>
+            </div>
+
+            <h3 style="color: #ff6600; font-size: 1.1rem; text-align: left;">2. Core Objectives</h3>
+            <ul style="padding-left: 20px; font-size: 0.92rem; margin-bottom: 25px; color: #444;">
+                <li style="margin-bottom: 6px;"><strong>Renovation of Ashok Vatika Temple:</strong> Constructing the Garbhagriha, Mandapa, and Parikrama Path in traditional Indian architectural style.</li>
+                <li style="margin-bottom: 6px;"><strong>Annual Delegation Visit:</strong> Organizing a yearly spiritual and friendship tour of 100 devotees from India to Sri Lanka.</li>
+                <li><strong>Promotion of Ramayana Culture:</strong> Spreading Ramayana-based values, education, and heritage in Sri Lanka.</li>
+            </ul>
+
+            <h3 style="color: #ff6600; font-size: 1.1rem; text-align: left;">3. Core Initiatives – 3 Dimensions</h3>
+            <div class="grid-3">
+                <div class="concept-card">
+                    <h4>Dimension 1: Temple Renovation</h4>
+                    <ul>
+                        <li>Installing a 9-foot granite statue of Mata Sita and an Ashok Pillar at Seetha Eliya.</li>
+                        <li>Planting 108 Ashok trees (<em>Saraca asoca</em>) using seeds from India.</li>
+                        <li>Building a 20-room <em>"Sita Dharamshala"</em> for Indian pilgrims.</li>
+                        <li>Providing clean drinking water and modern sanitation facilities.</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card">
+                    <h4>Dimension 2: Annual Delegation</h4>
+                    <ul>
+                        <li>100-member delegation traveling every Sita Navami (Vaisakha month) from Delhi(NCR).</li>
+                        <li>Delegation includes saints, youth, Matru Mandali, VHP volunteers, and scholars.</li>
+                        <li>108 Hanuman Chalisa recitations, joint Hindu community meetings, and Kar Seva.</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card">
+                    <h4>Dimension 3: Cultural Promotion</h4>
+                    <ul>
+                        <li>Weekly Ramayana classes in 10 Nuwara Eliya schools (translated in Sinhala & Tamil).</li>
+                        <li>Sita Shakti character-building camps for local young women.</li>
+                        <li>Digital Virtual Reality (VR) Ramayana exhibitions.</li>
+                        <li>Vedic ritual training for local priests by VHP Dharma Prasar.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; background: #fff3e6; padding: 18px; border-radius: 8px; text-align: left;">
+                <p style="margin: 0; font-size: 0.9rem; color: #444;"><strong>Execution Strategy:</strong> Guided by VHP Dharma Prasar & Seva Departments in collaboration with Sri Lankan Hindu Temple Trusts and the High Commission of India.</p>
+                <p style="margin: 6px 0 0 0; font-size: 0.9rem; color: #444;"><strong>Phase 1 Budget Appeal:</strong> Temple Renovation + 1 Delegation Tour + 10 School Pathshalas (Inviting CSR funds, NRIs, and devotees).</p>
+            </div>
+        </div>
+
+        <!-- SLOGAN BANNER -->
+        <div class="slogan-banner">
+            <h3>"Sita se Sanskar, Ramayan se Samadhan, Seva se Vishwa Kalyan"</h3>
+            <p>"From Ayodhya to Ashok Vatika – One Slogan, One Name, Jai Shri Ram!"</p>
+        </div>
+
+        <!-- 4. ITINERARY HEADER & DETAILS -->
+        <h2 style="font-family: 'Cinzel', serif; color: #ffffff; text-align: center; font-size: 1.7rem; margin: 40px 0 25px 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">
+            <i class="fas fa-route"></i> Ramayana Trail 5-Day Exposure Visit Itinerary
+        </h2>
+        <img src="yatra-bg.jpg" alt="Sri Lanka Ramayana Corridor Banner" class="full-banner-img" style="margin-bottom: 25px; border-radius: 10px;">
+        
+      <!-- Day 1: Only Text (No Image) -->
+<div class="day-card">
+    <div class="day-header">
+        <h3 style="margin: 0; color: #ff6600; font-size: 1.15rem;"><i class="fas fa-plane-arrival"></i> Day 1 : Arrival: Delhi - Colombo Bandaranaike International Airport</h3>
+        <span class="badge">Srilankan Airlines : 05:15 am - 08:50 am</span>
+    </div>
+    <div class="day-body">
+        <div class="day-content">
+            <ul>
+                <li><strong>Check-in:</strong> Marino Beach Colombo (35 mins from Airport) ~ Overnight Stay.</li>
+                <li><strong>Visit:</strong> Outing Shopping (Nearby Malls / Markets).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Day 2: Left Image, Right Text -->
+<div class="day-card">
+    <div class="day-header">
+        <h3 style="margin: 0; color: #ff6600; font-size: 1.15rem;"><i class="fas fa-torii-gate"></i> Day 2 : Colombo to Nuwara Eliya (Ashok Vatika Region)</h3>
+        <span class="badge">Stay: Araliya Green Hills Hotel</span>
+    </div>
+    <div class="day-body row-reverse">
+        <div class="day-content">
+            <ul>
+                <li><strong>After breakfast visit:</strong> Sri Bhakta Hanuman Temple, Ramboda (151km) ~ 4 hr approx. <em>(Marks the spot where Hanuman searched for Sita)</em>.</li>
+                <li><strong>Lunch:</strong> Lunch at Ramboda.</li>
+                <li><strong>Visit:</strong> Seeta Amman Kovil Temple, Nuwara Eliya - 1 hr 16 min (25 km). <em>(Site of Ashoka Vatika; Sita's place of Captivity)</em>.</li>
+                <li><strong>Activity:</strong> Sundar Kand Path in Ashok Vatika & Tea Break.</li>
+                <li><strong>Dinner & Check in:</strong> Araliya Green Hills Hotel.</li>
+            </ul>
+        </div>
+        <div class="day-image">
+            <img src="sita amanna.jpg" alt="Seeta Amman Kovil Temple Ashok Vatika">
+        </div>
+    </div>
+</div>
+
+<!-- Day 3: Left Text, Right Image -->
+<div class="day-card">
+    <div class="day-header">
+        <h3 style="margin: 0; color: #ff6600; font-size: 1.15rem;"><i class="fas fa-fire"></i> Day 3 : Nuwara Eliya to Kandy</h3>
+        <span class="badge">Stay: The Golden Crown Hotel, Kandy</span>
+    </div>
+    <div class="day-body row-normal">
+        <div class="day-content">
+            <ul>
+                <li><strong>09:00 AM Start:</strong> Visit Divurumpola Temple - 43 min (21.9 km) (near Nuwara Eliya). <em>(The site where Sita performed the Agni Pariksha Oath)</em>.</li>
+                <li><strong>Lunch:</strong> Nuwara Eliya Local sites tour & Tea Break.</li>
+                <li><strong>Travel to Kandy:</strong> ~2 hr 51 min (90.7 km).</li>
+                <li><strong>Night Stay:</strong> Arrive in Kandy and check in at The Golden Crown Hotel, Kandy.</li>
+            </ul>
+        </div>
+        <div class="day-image">
+            <img src="Divurumpola Temple.jpg" alt="Divurumpola Temple Agni Pariksha Site">
+        </div>
+    </div>
+</div>
+
+<!-- Day 4: Left Image, Right Text -->
+<div class="day-card">
+    <div class="day-header">
+        <h3 style="margin: 0; color: #ff6600; font-size: 1.15rem;"><i class="fas fa-gopuram"></i> Day 4 : Kandy to Colombo</h3>
+        <span class="badge">Stay: Marino Beach Colombo</span>
+    </div>
+    <div class="day-body row-reverse">
+        <div class="day-content">
+            <ul>
+                <li><strong>09:00 AM Start:</strong> Visit Temple of the Sacred Tooth Relic - 16 min (4.3 km). <em>(One of the most revered Buddhist shrines)</em>.</li>
+                <li><strong>Visit:</strong> Munneswaram Temple, Chilaw - 3 hr 12 min (111 km). <em>(Where Lord Rama prayed to Shiva for penance)</em>.</li>
+                <li><strong>Lunch Break:</strong> Travel Munneswaram Temple, Chilaw to Colombo - 2 hr (80 km).</li>
+                <li><strong>Overnight Stay:</strong> Marino Beach Colombo.</li>
+            </ul>
+        </div>
+        <div class="day-image">
+            <img src="Munneswaram Temple.jpg" alt="Munneswaram Temple Chilaw">
+        </div>
+    </div>
+</div>
+
+<!-- Day 5: Left Text, Right Image -->
+<div class="day-card">
+    <div class="day-header">
+        <h3 style="margin: 0; color: #ff6600; font-size: 1.15rem;"><i class="fas fa-plane-departure"></i> Day 5 : Colombo to Colombo Bandaranaike International Airport</h3>
+        <span class="badge">Flight: Air India AI-278 (17:05 pm - 20:50 pm)</span>
+    </div>
+    <div class="day-body row-normal">
+        <div class="day-content">
+            <ul>
+                <li><strong>09:00 AM Start:</strong> Visit Kelaniya Temple - 45 min (14.5 km). <em>(Site of Vibhishana's coronation by Lord Rama)</em>.</li>
+                <li><strong>Outing:</strong> Nearby Local Markets Outing.</li>
+                <li><strong>Check-out:</strong> From Marino Beach Colombo (1:30 pm).</li>
+                <li><strong>Travel to Airport:</strong> ~39 min (12.3 km) for flight departure.</li>
+            </ul>
+        </div>
+        <div class="day-image">
+            <img src="Kelaniya Temple.jpg" alt="Kelaniya Raja Maha Vihara Temple">
+        </div>
+    </div>
+</div>
+
+       <!-- Contact Section -->
+        <div class="contact-card">
+            <h3 style="font-family: 'Cinzel', serif; color: #ff6600; margin-top: 0; font-size: 1.35rem;">Contact Details & Program Coordinators</h3>
+            
+            <div class="contact-container">
+                <div class="contact-box">
+                    <p style="margin: 0; color: #ff6600; font-size: 0.88rem; font-weight: 500;">Program Chaired By:</p>
+                    <strong style="font-size: 1.05rem; display: block; margin-top: 3px;">Shri Avaneesh Tripathi</strong>
+                    <a href="tel:+917388895199" style="color: #ff6600; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 4px;">+91-xxx xxxx xxx</a>
+                </div>
+
+                <div class="contact-box">
+                    <p style="margin: 0; color: #ff6600; font-size: 0.88rem; font-weight: 500;">Program Manager:</p>
+                    <strong style="font-size: 1.05rem; display: block; margin-top: 3px;">Sharald Ahongsangbam</strong>
+                    <a href="tel:+917085657905" style="color: #ff6600; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 4px;">+91-xxx xxxx xxx</a>
+                </div>
+            </div>
+
+            <p style="margin-top: 25px; font-weight: 600; color: #555; font-size: 0.95rem;">
+                <i class="fas fa-envelope" style="color: #ff6600; margin-right: 5px;"></i> Email: <a href="mailto:Ashokvatikasrilanka@gmail.com" style="color: #ff6600; text-decoration: none;">Ashokvatikasrilanka@gmail.com</a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

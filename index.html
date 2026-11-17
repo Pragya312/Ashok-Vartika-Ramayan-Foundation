@@ -1,0 +1,3054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Vatika Ramayana Foundation</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    
+        :root {
+            --primary-saffron: #b3391b;
+            --secondary-gold: #d4ac0d;
+            --dark-maroon: #641e16;
+            --bg-cream: #FDF8EC; /* इमेज से लिया गया बैकग्राउंड कलर */
+            --bg-light: #FAF0D7;
+            --text-dark: #2c3e50;
+            --text-light: #444;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.06);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-cream);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cinzel', serif;
+            color: #B87333 !important;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Banner */
+        .top-bar {
+            background-color: var(--dark-maroon);
+            color: var(--secondary-gold);
+            font-size: 0.85rem;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation Container */
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 12px 0;
+            background-color: transparent;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links > li > a {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            min-height: 38px;
+            box-sizing: border-box;
+            background: linear-gradient(180deg, #C37A0B 0%, #A25F05 50%, #784400 100%);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
+            border-radius: 20px; 
+            border: 1px solid #E3A846; 
+            box-shadow: inset 0 1px 3px rgba(255, 230, 170, 0.4),
+                        inset 0 -2px 4px rgba(0, 0, 0, 0.5),
+                        0 3px 6px rgba(0, 0, 0, 0.15);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .nav-links > li > a:hover {
+            background: linear-gradient(180deg, #D48912 0%, #B56C0A 50%, #8A5000 100%);
+            color: #FFFFFF;
+            border-color: #FFF0C2;
+            transform: translateY(-2px);
+        }
+
+        .dropdown { position: relative; }
+        .arrow-icon { font-size: 10px; margin-left: 2px; }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #FFFDF7;
+            border: 1.5px solid #A25F05;
+            border-radius: 10px;
+            list-style: none;
+            padding: 6px 0;
+            min-width: 160px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+            z-index: 1000;
+        }
+
+        .dropdown-menu li a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            color: #593100;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #F7E7CC;
+            color: #A25F05;
+        }
+
+        .dropdown.show .dropdown-menu { display: block; }
+
+        /* HERO & MAIN SECTIONS BACKGROUN OVERRIDE */
+        .hero-image-banner {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FDF8EC;
+            padding: 20px 0;
+        }
+
+        .hero-image-banner img {
+            width: 100%;
+            height: auto; 
+            max-height: 70vh; 
+            object-fit: contain; 
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ABOUT TO GALLERY BACKGROUND COLOR (IMAGE EXACT COLOR MATCH) */
+        #about, 
+        #programmes, 
+        #international-projects, 
+        #gallery,
+        #objectives,
+        .about-premium-section,
+        .hero-below-content {
+            background-color: #FDF8EC !important;
+        }
+
+        .info-card, 
+        .programme-card, 
+        .about-text-box {
+            background: #FFFFFF;
+            border-radius: 8px;
+            padding: 22px;
+            border-left: 4px solid #B87333;
+            box-shadow: var(--shadow);
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 4px solid var(--primary-saffron);
+        }
+        :root {
+            --primary-saffron: #b3391b;
+            --secondary-gold: #d4ac0d;
+            --dark-maroon: #641e16;
+            --bg-cream: #fff8f5;
+            --bg-light: #fcf8f2;
+            --text-dark: #2c3e50;
+            --text-light: #444;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.06);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-cream);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cinzel', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Banner */
+        .top-bar {
+            background-color: var(--dark-maroon);
+            color: var(--secondary-gold);
+            font-size: 0.85rem;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+       /* Navigation Container */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0; /* Reduced padding for cleaner look */
+    background-color: transparent;
+}
+
+/* Links List */
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Reduced gap between pills */
+    margin: 0;
+    padding: 0;
+}
+
+/* Subtle & Compact Pill Box Styling */
+.nav-links > li > a {
+    display: flex;
+    flex-direction: row; /* Horizontal text + icon for compact height */
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    
+    /* Sleek Pill Dimensions */
+    padding: 8px 18px; /* Compact padding */
+    min-height: 38px;
+    box-sizing: border-box;
+    
+    /* Matched Golden-Ocher Banner Gradient */
+    background: linear-gradient(180deg, #C37A0B 0%, #A25F05 50%, #784400 100%);
+    color: #FFFFFF;
+    
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    
+    /* Smooth Oval / Pill Shape */
+    border-radius: 20px; 
+    
+    /* Subtle Gold Border */
+    border: 1px solid #E3A846; 
+    
+    /* Soft 3D Lighting Shadow */
+    box-shadow: inset 0 1px 3px rgba(255, 230, 170, 0.4),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.5),
+                0 3px 6px rgba(0, 0, 0, 0.15);
+                
+    transition: all 0.25s ease-in-out;
+}
+
+/* Hover Effect - Subtle Lift */
+.nav-links > li > a:hover {
+    background: linear-gradient(180deg, #D48912 0%, #B56C0A 50%, #8A5000 100%);
+    color: #FFFFFF;
+    border-color: #FFF0C2;
+    transform: translateY(-2px);
+    box-shadow: inset 0 1px 4px rgba(255, 240, 190, 0.6),
+                inset 0 -2px 5px rgba(0, 0, 0, 0.6),
+                0 5px 10px rgba(120, 68, 0, 0.25);
+}
+
+/* Dropdown Alignment & Arrow */
+.dropdown {
+    position: relative;
+}
+
+.arrow-icon {
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+/* Sub-menu Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFDF7;
+    border: 1.5px solid #A25F05;
+    border-radius: 10px;
+    list-style: none;
+    padding: 6px 0;
+    min-width: 160px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    color: #593100;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #F7E7CC;
+    color: #A25F05;
+}
+
+/* Open State */
+.dropdown.show .dropdown-menu {
+    display: block;
+}
+        /* Hero Image Banner - Full Image Display (No Cropping) */
+.hero-image-banner {
+    width: 100%;
+    max-width: 1280px; /* Container width se match karne ke liye */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-cream);
+    padding: 20px 0;
+}
+
+.hero-image-banner img {
+    width: 100%;
+    height: auto; 
+    max-height: 70vh; 
+    object-fit: contain; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+        /* Section Title Styles */
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title .subtext {
+            color: var(--primary-saffron);
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-saffron);
+        }
+
+        /* About Us Details Layout */
+        .about-text-content {
+section#about {
+    background-color: #fff3e6 !important;
+}
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-saffron);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 22px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-saffron);
+            box-shadow: var(--shadow);
+        }
+
+        .info-card h3, .info-card h4 {
+            color: var(--primary-saffron);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Motto Banner */
+        .motto-banner {
+            background: linear-gradient(135deg, var(--primary-saffron), #8b250e);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            margin: 30px 0;
+            font-size: 1.05rem;
+        }
+
+        /* Grid Layout for Programmes & Projects */
+        .programmes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .programme-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 22px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-saffron);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        .programme-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .prog-icon {
+            font-size: 1.5rem;
+            color: var(--primary-saffron);
+            margin-bottom: 10px;
+        }
+
+        .programme-card h3 {
+            color: var(--primary-saffron);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .programme-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .prog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .prog-tags span {
+            background: #fdf2e9;
+            color: var(--primary-saffron);
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        /* Pillar Card */
+        .pillar-card {
+            background: var(--white);
+            border-left: 4px solid var(--primary-saffron);
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .pillar-card h4 {
+            color: var(--primary-saffron);
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 4px solid var(--primary-saffron);
+        }
+
+        footer p.motto {
+            color: var(--secondary-gold);
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 992px) {
+            .nav-links { display: none; }
+            .hero h2 { font-size: 1.8rem; }
+        }
+        /* General Overlay & Slide Panel */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide-panel {
+    background: #ffffff;
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 25px 20px;
+    box-shadow: -6px 0 25px rgba(0,0,0,0.25);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-overlay.active .slide-panel {
+    transform: translateX(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0d0c0;
+    padding-bottom: 12px;
+}
+
+.modal-header h3 {
+    color: var(--primary-saffron);
+    font-size: 1.25rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #777;
+}
+
+.modal-subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 10px 0 20px 0;
+}
+
+/* Volunteer Form Input Styles */
+.volunteer-form .form-group { margin-bottom: 15px; }
+.volunteer-form label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px; }
+.volunteer-form input, .volunteer-form select, .volunteer-form textarea {
+    width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.9rem;
+}
+.form-row { display: flex; gap: 12px; }
+.form-row .form-group { flex: 1; }
+.submit-btn {
+    width: 100%; background: var(--primary-saffron); color: #fff; padding: 12px; border: none;
+    border-radius: 6px; font-weight: 600; cursor: pointer; margin-top: 10px;
+}
+
+/* Chatbot Styles */
+.chatbot-panel { justify-content: space-between; }
+.chat-box { flex: 1; overflow-y: auto; padding: 15px 0; display: flex; flex-direction: column; gap: 12px; }
+.chat-msg { padding: 10px 14px; border-radius: 10px; font-size: 0.88rem; max-width: 85%; line-height: 1.4; }
+.bot-msg { background: #fff3e6; color: #2c3e50; border-left: 4px solid var(--primary-saffron); align-self: flex-start; }
+.user-msg { background: var(--primary-saffron); color: #fff; align-self: flex-end; }
+.chat-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.chat-chips button {
+    background: #f0d0c0; border: none; padding: 5px 10px; border-radius: 15px; font-size: 0.78rem; cursor: pointer; color: #641e16; font-weight: 600;
+}
+.chat-input-area { display: flex; gap: 8px; border-top: 1px solid #eee; padding-top: 12px; }
+.chat-input-area input { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 20px; outline: none; font-size: 0.88rem; }
+.chat-input-area button { background: var(--primary-saffron); color: #fff; border: none; padding: 10px 15px; border-radius: 50%; cursor: pointer; }
+   /* Premium Section Styling */
+   #about, #objectives {
+    background-color: #f5e9d4 !important;
+}
+.about-premium-section {
+    background: #faf7f2;
+    padding: 80px 0;
+    font-family: inherit;
+}
+
+.about-top-head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pill-tag {
+    background: #ffecde;
+    color: #ff6f00;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 6px 18px;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    border: 1px solid #ffd1b3;
+    margin-bottom: 12px;
+}
+
+.about-top-head h2 {
+    color: #1a252f;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.about-top-head p {
+    color: #7f8c8d;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.glow-line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6f00, #ff9f43);
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* Grid Layout */
+ #objectives {
+    background-color: #f5e9d4 !important;
+}
+.obj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* Individual Card */
+.obj-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #f1e4d8;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.obj-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(255, 111, 0, 0.12);
+    border-color: #ff6f00;
+}
+
+.obj-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.obj-badge {
+    background: #fff3eb;
+    color: #ff6f00;
+    font-size: 0.9rem;
+    font-weight: 800;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffe0cc;
+}
+
+.obj-icon-box {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff6f00, #ff9f43);
+    color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 6px 15px rgba(255, 111, 0, 0.25);
+}
+
+.obj-box h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+
+.obj-sub-title {
+    color: #ff6f00;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.obj-box p {
+    color: #596275;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.obj-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.obj-chip {
+    background: #fdf8f3;
+    color: #444;
+    border: 1px solid #f3e0d2;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+/* Master Box (Objective 7) */
+.obj-master-box {
+    grid-column: 1 / -1;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    border: 2px solid #ff6f00;
+    box-shadow: 0 15px 35px rgba(255, 111, 0, 0.08);
+}
+
+.master-tag {
+    background: #ff6f00;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.master-head h3 {
+    color: #1a252f;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.master-motto {
+    color: #ff6f00;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.master-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.mini-welfare-card {
+    background: #fffaf5;
+    border-radius: 12px;
+    padding: 22px; 
+    border: 1px solid #fce8d9;
+    display: flex;
+    gap: 15px;
+}
+
+.w-icon {
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    color: #ff6f00;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f7dfce;
+}
+
+.mini-welfare-card h4 {
+    color: #2c3e50;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.mini-welfare-card p {
+    color: #666;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0;
+}<style>
+  /* Global Headings Color (Golden/Maroon Tone from Image) */
+  h1, h2, h3, h4, h5, h6, 
+  .heading, .main-title, .page-title {
+      color: #B87333 !important; /* Premium Gold Tone */
+      font-family: 'Cinzel', 'Georgia', serif; /* Classic Elegant Look */
+  }
+
+  /* Global Sub-headings and Paragraphs Color (Dark Brown Tone) */
+  p, .subheading, .subtitle, .description, span.sub-title {
+      color: #4A2E16 !important; /* Deep Rich Brown */
+  }
+
+  /* Programme Cards Special Styling */
+  .programme-card {
+      border-left: 4px solid #B87333 !important;
+  }
+
+  /* Tags / Highlights styling */
+  .prog-tags span {
+      background-color: #FDF5E6 !important;
+      color: #4A2E16 !important;
+      border: 1px solid #B87333 !important;
+  }
+  /* Global Headings Color (Golden/Maroon Tone from Image) */
+  h1, h2, h3, h4, h5, h6, 
+  .heading, .main-title, .page-title {
+      color: #B87333 !important; /* Premium Gold Tone */
+      font-family: 'Cinzel', 'Georgia', serif; /* Classic Elegant Look */
+  }
+
+  /* Global Sub-headings and Paragraphs Color (Dark Brown Tone) */
+  p, .subheading, .subtitle, .description, span.sub-title {
+      color: #4A2E16 !important; /* Deep Rich Brown */
+  }
+
+  /* Programme Cards Special Styling */
+  .programme-card {
+      border-left: 4px solid #B87333 !important;
+  }
+
+  /* Tags / Highlights styling */
+  .prog-tags span {
+      background-color: #FDF5E6 !important;
+      color: #4A2E16 !important;
+      border: 1px solid #B87333 !important;
+  }
+  .section-title h2,
+  .section-title .subtext,
+  .pillar-card h4,
+  .programme-card h3,
+  .prog-icon,
+  .prog-icon i {
+    color: #E67E00 !important;
+  }
+
+  .pillar-card {
+    border-left: 4px solid #E67E00 !important;
+  }
+
+  .prog-tags span {
+    color: #E67E00 !important;
+    background-color: #FFF3E0 !important;
+    border: 1px solid #E67E00 !important;
+  }
+  .slideshow-wrapper {
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    background-color: #000;
+  }
+
+  .slides-container {
+    position: relative;
+    width: 100%;
+    height: 420px;
+  }
+
+  .slide-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* Smooth Fade Effect */
+  .fade-effect {
+    animation: fadeAnimation 1.2s ease-in-out;
+  }
+
+  @keyframes fadeAnimation {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+  }
+
+  /* Next & Previous Arrow Buttons */
+  .slide-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 18px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    user-select: none;
+    z-index: 10;
+  }
+
+  .slide-btn:hover {
+    background: #C37A0B;
+  }
+
+  .prev-btn { left: 15px; }
+  .next-btn { right: 15px; }
+
+  /* Navigation Dots */
+  .dots-wrapper {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  .dot-item {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .dot-item.active-dot, .dot-item:hover {
+    background-color: #C37A0B;
+    transform: scale(1.2);
+  }
+  /* Slideshow Container */
+.slideshow-container {
+  max-width: 800px; /* Aap apne hisab se width adjust kar sakte hain (e.g., 600px, 1000px) */
+  width: 100%;
+  margin: 0 auto; /* Center Alignment */
+  position: relative;
+  background-color: #000; /* Agar image ka aspect ratio alag ho to background dark dikhega */
+  border-radius: 8px; /* Optional: Rounded corners */
+  overflow: hidden;
+}
+
+/* Slide Item Wrapper */
+.slide-item {
+  display: none;
+  width: 100%;
+  height: 450px; /* Ek fixed height set karein */
+  text-align: center;
+}
+
+/* Image Styling - Puri Image Dikhne Ke Liye */
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Isse image bina kate (crop huye) puri dikhegi */
+  display: block;
+}
+
+/* Dots Alignment */
+.dots-container {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.dot-item {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot-item:hover {
+  background-color: #717171;
+}
+/* 1. Main Slideshow Container */
+.slideshow-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #FF6600 !important; /* !important se orange color enforce hoga */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 2. Slide Item (Iska background bhi orange kar diya hai) */
+.slide-item {
+  display: none;
+  width: 100%;
+  height: 450px; /* Ya aapki zaroorat ke hisab se height */
+  background-color: #FF6600 !important; /* Orange Background */
+  text-align: center;
+}
+
+/* 3. Image Styling */
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Image bina kape puri dikhegi */
+  display: block;
+  margin: 0 auto;
+}
+ </style>
+</head>
+<body>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'en', 
+          includedLanguages: 'hi,en,ta,te,kn,ml,gu,bn,pa,mr,si',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        MATA SITA SE SANSKAR • RAMAYAN SE SAMADHAN • SEWA SE VISHVA KALYAN
+    </div>
+
+    <!-- Header / Navbar Section (Systematically Adjusted Layout) -->
+<header class="navbar" style="background-color: #ffffff; box-shadow: 0 4px 15px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; padding: 10px 0;">
+    <div class="container nav-container" style="display: flex; align-items: center; justify-content: space-between; max-width: 1320px; margin: 0 auto; padding: 0 20px;">
+        
+        <!-- 1. Left Side: Logos Area -->
+        <div class="logo-area" style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
+            <!-- Main Logo -->
+            <img src="logo.jpeg" alt="Ashok Vatika Logo" class="custom-logo" style="height: 80px; width: auto; object-fit: contain;" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/628/628324.png';">
+            
+            <!-- Vertical Divider -->
+            <div style="height: 48px; width: 1.5px; background-color: #e0e0e0;"></div>
+
+            <!-- Side Logo -->
+            <img src="ashok vartika.jpg" alt="Side Logo" class="side-logo" style="height: 80px; width: auto; object-fit: contain;" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/3596/3596091.png';">
+        </div>
+
+        <nav class="main-nav">
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#international-projects">Global Projects</a></li>
+        
+        <li class="dropdown" id="galleryDropdown" style="position: relative; list-style: none;">
+    <a href="javascript:void(0)" onclick="toggleGalleryDropdown(event)" style="cursor: pointer; text-decoration: none;">
+        Gallery <i class="fas fa-chevron-down arrow-icon"></i>
+    </a>
+    <ul id="galleryDropdownMenu" style="display: none; position: absolute; top: 100%; left: 0; background-color: #FFFDF7; min-width: 160px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; padding: 8px 0; z-index: 1000; list-style: none;">
+        <li style="list-style: none;">
+            <a href="#gallery" onclick="handleNavGalleryClick('photos')" style="display: block; padding: 10px 15px; color: #8B4513; text-decoration: none; font-size: 0.9rem;">
+                <i class="fas fa-camera"></i> Photos
+            </a>
+        </li>
+        <li style="list-style: none;">
+            <a href="#gallery" onclick="handleNavGalleryClick('media')" style="display: block; padding: 10px 15px; color: #8B4513; text-decoration: none; font-size: 0.9rem;">
+                <i class="fas fa-newspaper"></i> Media Articles
+            </a>
+        </li>
+    </ul>
+</li>
+        
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+        <!-- 3. Right Side: Language Translator Widget -->
+        <div class="lang-selector" style="display: flex; align-items: center; gap: 8px; background: #fff8f5; padding: 6px 12px; border-radius: 20px; border: 1px solid #f0d0c0; flex-shrink: 0;">
+            <i class="fas fa-globe" style="font-size: 1.05rem; color: #b3391b;"></i>
+            <div id="google_translate_element"></div>
+        </div>
+
+    </div>
+</header>
+<!-- Hero Image Only -->
+<section class="hero-image-banner" id="home">
+    <img src="hero-bg.jpeg" alt="Ashok Vatika Ramayana Foundation Hero Banner" onerror="this.onerror=null; this.src='ram mandir.jpg';">
+</section>
+
+<!-- Hero Text Content Below Image (Systematically Line-Broken & Aligned) -->
+<section class="hero-below-content" style="background-color: #fcf8f2; padding: 50px 20px; text-align: center; border-bottom: 2px solid #e0d0c0;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+        
+      <!-- Main Heading -->
+<h2 style="font-family: 'Cinzel', serif; font-size: 2.3rem; color: #a17820; margin-bottom: 12px; line-height: 1.3;">
+    Preserving the Legacy of Ramayana
+</h2>
+
+<!-- Subtitle -->
+<p class="subtitle" style="color: #8c6517; font-size: 1.1rem; font-weight: 600; margin-bottom: 18px; letter-spacing: 0.5px;">
+    Empowering Communities • Preserving Heritage • Serving with Dharma
+</p>
+<!-- Description -->
+<p class="description" style="font-size: 1.05rem; color: #8c6517; line-height: 1.8; margin-bottom: 28px; max-width: 780px; margin-left: auto; margin-right: auto;">
+    अयोध्या से अशोक वाटिका तक — <br>
+    रामायण को 21वीं सदी के विश्व की समाधान संस्कृति के रूप में स्थापित करने के लिए समर्पित वैश्विक सेवा संगठन।
+</p>
+
+<!-- Buttons -->
+<div class="hero-buttons" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
+    <a href="#about" class="btn-primary" style="background: #E67E00; color: #ffffff; padding: 12px 26px; border-radius: 5px; font-weight: 600; font-size: 0.95rem; text-decoration: none;">
+        Explore Our Work <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+    </a>
+    <a href="#contact" class="btn-primary" style="background: transparent; color: #E67E00; border: 2px solid #E67E00; padding: 10px 24px; border-radius: 5px; font-weight: 600; font-size: 0.95rem; text-decoration: none;">
+        Join as Volunteer
+    </a>
+</div>
+
+<!-- Tags -->
+<div class="tags-container" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+    <span class="tag" style="background: #FFFDF7; color: #E67E00; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; border: 1px solid #E67E00;">
+        <i class="fas fa-check-circle"></i> Registered NGO • 12A & 80G Certified
+    </span>
+    <span class="tag" style="background: #FFFDF7; color: #E67E00; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; border: 1px solid #E67E00;">
+        <i class="fas fa-map-marker-alt"></i> Pan-India & Global Impact
+    </span>
+</div>
+
+    </div>
+</section>
+<!-- About Us Section -->
+<section id="about" style="background-color: #FFF8E7; padding: 60px 0; width: 100%; box-sizing: border-box;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+        
+        <!-- Section Title -->
+        <header style="text-align: center; margin-bottom: 40px;">
+            <span style="color: #E67E00; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 5px;">ABOUT US</span>
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.2rem; color: #8B5A2B; margin: 0;">Ashok Vatika Ramayana Foundation</h2>
+        </header>
+
+        <!-- Main 2-Column Container -->
+        <div style="display: flex; gap: 35px; flex-wrap: wrap; justify-content: space-between;">
+            
+            <!-- LEFT COLUMN: About Us Text (Top) + Vision Card (Bottom) -->
+            <div style="flex: 1 1 450px; display: flex; flex-direction: column; gap: 35px; min-width: 320px;">
+                
+                <!-- About Us Text Box -->
+                <article style="background-color: #FFFFFF; padding: 36px 32px; border-radius: 12px; border-left: 5px solid #E67E00; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); text-align: justify; text-justify: inter-word; flex: 1; box-sizing: border-box;">
+                    <p style="margin: 0 0 18px 0; font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.95rem; line-height: 1.8; color: #333333; letter-spacing: 0.2px;">
+                        <strong>Ashok Vatika Ramayana Foundation</strong>, based in Delhi (NCR) / Greater Noida, Bharat, is a global seva organization affiliated with <strong>Rashtriya Seva Samvardhan Samiti</strong>, <strong>Vishva Hindu Parishad (VHP)</strong>, and driven by the principle of <em>Seva Parmo Dharmah</em>. Certified by <strong>Shri Ganga Raju Ji</strong> (President) and <strong>Shri Ajay Kumar Pareek Ji</strong> (Secretary), and guided by the motto <em>"Seva Dharmah Param Gahanah"</em> and <em>"Mata Sita Se Sanskar, Ramayan Se Samadhan, Sewa Se Vishva Kalyan"</em>, we work for Dharma Prasar through the <strong>Digital Ashok Vatika Rath (VR)</strong> and <strong>Ramayana Pathshalas</strong> across 50 countries.
+                    </p>
+
+                    <p style="margin: 0; font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.95rem; line-height: 1.8; color: #333333; letter-spacing: 0.2px;">
+                        For Seva, we proposed the <strong>Jirnoddhar</strong> of the ancient Sita Temple, Sita Dharmashala (20–50 rooms), Sita Rasoi, and the 108 Ashok Trees Vatika at Sita Eliya, Sri Lanka. Through <strong>Sita Shakti</strong>, we empower 1 Lakh daughters, and promote <strong>Samrasta</strong> by reviving the Ramayana Corridor connecting Ayodhya (Bharat), Janakpur (Nepal), and Ashok Vatika (Sri Lanka) with an annual Bharat Delegate Yatra on Sita Navami.
+                    </p>
+                </article>
+
+                <!-- Vision Card (Aligned directly under About Us Text) -->
+                <div style="background-color: #FFFFFF; padding: 36px 32px; border-radius: 12px; border-left: 5px solid #E67E00; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); box-sizing: border-box;">
+                    <h3 style="color: #8B5A2B; font-family: 'Cinzel', serif; font-size: 1.3rem; font-weight: 700; margin: 0 0 16px 0; display: flex; align-items: center; gap: 12px; letter-spacing: 0.3px;">
+                        <i class="fas fa-eye" style="font-size: 1.2rem; color: #E67E00; min-width: 20px; text-align: center;"></i> Our Vision
+                    </h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.95rem; line-height: 1.8; color: #333333; letter-spacing: 0.2px; margin: 0; text-align: justify; text-justify: inter-word;">
+                        To build a harmonious society rooted in the timeless values of the Ramayana—dharma, compassion, and service—empowering communities across India and globally through heritage, education, and sustainability.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: Image (Top) + Mission Card (Bottom) -->
+            <div style="flex: 1 1 450px; display: flex; flex-direction: column; gap: 35px; min-width: 320px;">
+                
+                <!-- Image Box (Matches About Us Text Height dynamically) -->
+                <div style="flex: 1; min-height: 300px; width: 100%;">
+                    <img src="ram mandir.jpg" alt="Ram Mandir" style="width: 100%; height: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); object-fit: cover; display: block;">
+                </div>
+
+                <!-- Mission Card (Aligned directly under Image) -->
+                <div style="background-color: #FFFFFF; padding: 36px 32px; border-radius: 12px; border-left: 5px solid #E67E00; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); box-sizing: border-box;">
+                    <h3 style="color: #8B5A2B; font-family: 'Cinzel', serif; font-size: 1.3rem; font-weight: 700; margin: 0 0 16px 0; display: flex; align-items: center; gap: 12px; letter-spacing: 0.3px;">
+                        <i class="fas fa-bullseye" style="font-size: 1.2rem; color: #E67E00; min-width: 20px; text-align: center;"></i> Our Mission
+                    </h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.95rem; line-height: 1.8; color: #333333; letter-spacing: 0.2px; margin: 0; text-align: justify; text-justify: inter-word;">
+                        To preserve and promote the cultural, spiritual, and ethical teachings of the Ramayana by fostering education, service, and community outreach, inspiring individuals to live with compassion, truth, and responsibility.
+                    </p>
+                </div>
+
+            </div>
+
+        </div> 
+    </div>
+</section>
+
+</div>
+        <!-- "Know More" Button -->
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="yatra-details.html" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #E67E00, #C66B00); color: #ffffff; padding: 14px 32px; border-radius: 30px; font-weight: 700; font-size: 1rem; text-decoration: none; box-shadow: 0 6px 16px rgba(230,126,0,0.3); transition: all 0.3s ease;">
+                Know More <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+            </a>
+        </div>
+
+        <!-- Motto Banner -->
+        <div style="background: linear-gradient(135deg, #E67E00, #E67E00); color: #ffffff; padding: 20px; border-radius: 8px; text-align: center; font-weight: 600; margin-top: 30px; font-size: 1.02rem;">
+            Target by 2030: 100 Ramayana Research Centres globally, Ramayana Path Gaman Cultural Tourism, 1 Lakh Daughters connected with Sita Shakti, and 1 Lakh Ashok Trees planted across Bharat & Sri Lanka.
+        </div>
+
+    </div>
+</div>
+<!-- Slideshow HTML Structure -->
+<section class="slideshow-wrapper">
+  <div class="slides-container">
+    <!-- Image 1 -->
+    <div class="slide-item fade-effect">
+      <img src="sita amanna.jpg" alt="Sita Amanna Temple in Srilanka">
+    </div>
+
+    <!-- Image 2 -->
+    <div class="slide-item fade-effect">
+      <img src="5.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+   <!-- Image 3 -->
+    <div class="slide-item fade-effect">
+      <img src="6.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+  <!-- Image 4 -->
+    <div class="slide-item fade-effect">
+      <img src="srilanka tour.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+<!-- Image 5 -->
+    <div class="slide-item fade-effect">
+      <img src="mandir puja.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+  <!-- Image 6-->
+    <div class="slide-item fade-effect">
+      <img src="RAM JANM BHUMI.jpeg" alt="Sri Sri Ravi Shankar Ji" onerror="this.src='sri sri ravi shankar.jpeg';">
+    </div>
+
+<!-- Image 7-->
+    <div class="slide-item fade-effect">
+      <img src="shri ram temple .jpeg" alt="Sri Sri Ravi Shankar Ji" onerror="this.src='sri sri ravi shankar.jpeg';">
+    </div>
+
+    <!-- Image 8-->
+    <div class="slide-item fade-effect">
+      <img src="MANDIR SITA MATA.jpeg" alt="Sri Sri Ravi Shankar Ji" onerror="this.src='sri sri ravi shankar.jpeg';">
+    </div>
+
+     <!-- Image 9 -->
+    <div class="slide-item fade-effect">
+      <img src="4.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+    <!-- Image 10-->
+    <div class="slide-item fade-effect">
+      <img src="Sri sri ravi shankar.jpeg" alt="Sri Sri Ravi Shankar Ji" onerror="this.src='sri sri ravi shankar.jpeg';">
+    </div>
+
+    <!-- Image 11 -->
+    <div class="slide-item fade-effect">
+      <img src="Mahindra Rajapaksa.jpeg" alt="Former Prime Minister of Srilanka">
+    </div>
+  </div>
+
+  <!-- Image 12 -->
+    <div class="slide-item fade-effect">
+      <img src="former prime minister.jpeg" alt="Former Prime Minister of Srilanka">
+    </div>
+  </div>
+
+  <!-- Image 13 -->
+    <div class="slide-item fade-effect">
+      <img src="gita manishi.jpeg" alt="Swami gita manishi ji">
+    </div>
+  </div>
+
+  <!-- Image 14 -->
+    <div class="slide-item fade-effect">
+      <img src="srilanka clebration.jpeg" alt="Srilanka">
+    </div>
+  </div>
+  
+    <!-- Image 15 -->
+    <div class="slide-item fade-effect">
+      <img src="1.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+  <!-- Image 16 -->
+    <div class="slide-item fade-effect">
+      <img src="2.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+  <!-- Image 17 -->
+    <div class="slide-item fade-effect">
+      <img src="3.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+  <!-- Image 18 -->
+    <div class="slide-item fade-effect">
+      <img src="ndtv srilanka.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+  <!-- Image 15 -->
+    <div class="slide-item fade-effect">
+      <img src="7.jpeg" alt="Srilanka">
+    </div>
+  </div>
+
+  <!-- Manual Arrow Buttons -->
+  <button class="slide-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="slide-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+
+  <!-- Indicator Dots -->
+  <div class="dots-wrapper">
+    <span class="dot-item" onclick="setSlide(1)"></span>
+    <span class="dot-item" onclick="setSlide(2)"></span>
+    <span class="dot-item" onclick="setSlide(3)"></span>
+    <span class="dot-item" onclick="setSlide(4)"></span>
+    <span class="dot-item" onclick="setSlide(5)"></span>
+    <span class="dot-item" onclick="setSlide(6)"></span>
+    <span class="dot-item" onclick="setSlide(7)"></span>
+    <span class="dot-item" onclick="setSlide(8)"></span>
+    <span class="dot-item" onclick="setSlide(9)"></span>
+    <span class="dot-item" onclick="setSlide(10)"></span>
+    <span class="dot-item" onclick="setSlide(11)"></span>
+    <span class="dot-item" onclick="setSlide(12)"></span>
+    <span class="dot-item" onclick="setSlide(13)"></span>
+    <span class="dot-item" onclick="setSlide(14)"></span>
+    <span class="dot-item" onclick="setSlide(15)"></span>
+
+  </div>
+</section>
+
+<!-- Section: 7 Core Objectives -->
+<section style="background-color: #FDF6E3; padding: 60px 0; width: 100%; display: block; clear: both;" id="objectives">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+        
+        <!-- Section Title -->
+        <div style="text-align: center; margin-bottom: 45px;">
+            <span style="color: #E67E00; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 6px;">Core Framework</span>
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.2rem; color: #E67E00; margin: 0 0 10px 0; font-weight: 700;">7 Core Objectives of Ashok Vatika Ramayana Foundation</h2>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.95rem; color: #666666; margin: 0; letter-spacing: 0.3px;">Sewa • Sanskar • Sanskriti • Vishva Kalyan</p>
+        </div>
+
+        <!-- 6 Main Objectives Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
+
+            <!-- Card 01 -->
+            <div style="background-color: #FFFFFF; padding: 28px 24px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                        <span style="background: #E67E00; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; padding: 3px 12px; border-radius: 20px;">01</span>
+                        <i class="fas fa-vr-cardboard" style="font-size: 1.4rem; color: #E67E00;"></i>
+                    </div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; margin: 0 0 4px 0;">Ramayana Darshan</h3>
+                    <span style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #C66B00; font-weight: 600; display: block; margin-bottom: 12px;">Solution to the World</span>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.7; margin: 0; text-align: justify; text-justify: inter-word;">
+                        Make Ramayana a life-philosophy. Digital Ashok Vatika Rath (VR) in 50 countries, Ramayana Pathshala in schools, Leadership Workshop for youth.
+                    </p>
+                </div>
+            </div> 
+
+            <!-- Card 02 -->
+            <div style="background-color: #FFFFFF; padding: 28px 24px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                        <span style="background: #E67E00; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; padding: 3px 12px; border-radius: 20px;">02</span>
+                        <i class="fas fa-shield-alt" style="font-size: 1.4rem; color: #E67E00;"></i>
+                    </div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; margin: 0 0 4px 0;">Sita Shakti</h3>
+                    <span style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #C66B00; font-weight: 600; display: block; margin-bottom: 12px;">Courage in 1 Lakh Daughters</span>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.7; margin: 0; text-align: justify; text-justify: inter-word;">
+                        Ashok Vatika is symbol of Sita's courage. For 1 Lakh daughters (8–18 years) — Character Building, Self Defence, Helpline, Luv-Kush Gurukul.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 03 -->
+            <div style="background-color: #FFFFFF; padding: 28px 24px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                        <span style="background: #E67E00; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; padding: 3px 12px; border-radius: 20px;">03</span>
+                        <i class="fas fa-gopuram" style="font-size: 1.4rem; color: #E67E00;"></i>
+                    </div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; margin: 0 0 4px 0;">Sri Lanka Seva</h3>
+                    <span style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #C66B00; font-weight: 600; display: block; margin-bottom: 12px;">At Sita Eliya</span>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.7; margin: 0; text-align: justify; text-justify: inter-word;">
+                        Jirnoddhar of Sita Temple, 50-room Dharmashala, Sita Rasoi (Daily Annadanam), 108 Ashok Trees Vatika, Seva in 10 Sinhala-Tamil schools.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 04 -->
+            <div style="background-color: #FFFFFF; padding: 28px 24px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                        <span style="background: #E67E00; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">04</span>
+                        <i class="fas fa-route" style="font-size: 1.4rem; color: #E67E00;"></i>
+                    </div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; margin: 0 0 4px 0;">Ramayana Corridor</h3>
+                    <span style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #C66B00; font-weight: 600; display: block; margin-bottom: 12px;">Uniting 3 Nations</span>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.7; margin: 0; text-align: justify; text-justify: inter-word;">
+                        Revive sacred route Ayodhya (Bharat) - Janakpur (Nepal) - Ashok Vatika (Sri Lanka). Annual 100-member Bharat Yatra on Sita Navami.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 05 -->
+            <div style="background-color: #FFFFFF; padding: 28px 24px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                        <span style="background: #E67E00; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">05</span>
+                        <i class="fas fa-monument" style="font-size: 1.4rem; color: #E67E00;"></i>
+                    </div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; margin: 0 0 4px 0;">Sanskriti Raksha</h3>
+                    <span style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #C66B00; font-weight: 600; display: block; margin-bottom: 12px;">Protecting Lost Sites</span>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.7; margin: 0; text-align: justify; text-justify: inter-word;">
+                        Identify and digitally document 50+ endangered sites from Valmiki, Tulsidas, and Kamba Ramayana.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 06 -->
+            <div style="background-color: #FFFFFF; padding: 28px 24px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                        <span style="background: #E67E00; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; padding: 3px 10px; border-radius: 20px;">06</span>
+                        <i class="fas fa-globe-americas" style="font-size: 1.4rem; color: #E67E00;"></i>
+                    </div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; margin: 0 0 4px 0;">Global Hindu Connect</h3>
+                    <span style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #C66B00; font-weight: 600; display: block; margin-bottom: 12px;">Connecting NRI Youth</span>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.7; margin: 0; text-align: justify; text-justify: inter-word;">
+                        Connect 15 million NRI youth in USA, Canada, UK, Europe, Oceania with VHPA America, HSS UK, Australia Hindu orgs. 20 Sita Character Clubs in universities.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Card 7: Featured Master Pillar -->
+        <div style="background-color: #FFFFFF; padding: 32px 28px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-top: 35px; border-left: 6px solid #E67E00;">
+            
+            <!-- Pillar Header -->
+            <div style="margin-bottom: 25px;">
+                <span style="background: #E67E00; color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 20px; display: inline-block; margin-bottom: 10px; letter-spacing: 0.5px;">
+                    <i class="fas fa-star" style="margin-right: 5px;"></i> CORE PILLAR 07
+                </span>
+                <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; margin: 0 0 12px 0; color: #E67E00; font-weight: 700;">Social Contribution</h3>
+                <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.98rem; font-style: italic; color: #555555; margin: 0; border-left: 3px solid #E67E00; padding-left: 14px; line-height: 1.6;">
+                    "Ramayana-Driven Health, Education & Community Welfare — From Ramayana comes Health, Education and Prosperity."
+                </p>
+            </div>
+
+            <!-- Sub-items Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px;">
+                
+                <!-- Health -->
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <i class="fas fa-notes-medical" style="font-size: 1.4rem; color: #E67E00; margin-top: 2px; min-width: 24px;"></i>
+                    <div>
+                        <h4 style="font-family: 'Cinzel', serif; margin: 0 0 6px 0; font-size: 1.05rem; color: #E67E00; font-weight: 700;">Health (Sita Arogyam)</h4>
+                        <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; margin: 0; font-size: 0.88rem; line-height: 1.6; color: #444444; text-align: justify; text-justify: inter-word;">
+                            Free health camps for women, Ashok Vatika Aushadhiya Vatika (conserving 20 herbs from Ramayana), Ayurveda camps in India-Sri Lanka, Medical Kits in every Yatra.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <i class="fas fa-graduation-cap" style="font-size: 1.4rem; color: #E67E00; margin-top: 2px; min-width: 24px;"></i>
+                    <div>
+                        <h4 style="font-family: 'Cinzel', serif; margin: 0 0 6px 0; font-size: 1.05rem; color: #E67E00; font-weight: 700;">Education (Luv-Kush Gurukul)</h4>
+                        <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; margin: 0; font-size: 0.88rem; line-height: 1.6; color: #444444; text-align: justify; text-justify: inter-word;">
+                            Free Sanskar + modern education for poor children, Digital Pathshala, scholarships, books-uniforms-computer labs for 10 schools in Sri Lanka.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Community Welfare -->
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <i class="fas fa-hand-holding-heart" style="font-size: 1.4rem; color: #E67E00; margin-top: 2px; min-width: 24px;"></i>
+                    <div>
+                        <h4 style="font-family: 'Cinzel', serif; margin: 0 0 6px 0; font-size: 1.05rem; color: #E67E00; font-weight: 700;">Community Welfare</h4>
+                        <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; margin: 0; font-size: 0.88rem; line-height: 1.65; color: #444444;">
+                            <strong>Ram-Rasoi:</strong> Daily Annadanam at 3 Dhams.<br>
+                            <strong>Sita Swavalamban:</strong> Stitching & incense centres.<br>
+                            <strong>Disaster Seva:</strong> Ram Seva Dal with VHP.<br>
+                            <strong>Environment:</strong> 1 Lakh Ashok-Peepal-Banyan trees.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- Section 1: 5 VHP Aligned Pillars -->
+<section style="background-color: #FFFFFF; padding: 60px 0; width: 100%; display: block;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+        
+        <!-- Section Header -->
+        <div style="text-align: center; margin-bottom: 45px;">
+            <span style="color: #E67E00; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 6px;">Core Framework</span>
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.2rem; color: #E67E00; margin: 0; font-weight: 700;">Our Five Pillars (Aligned with VHP)</h2>
+        </div>
+        
+        <!-- Pillars Flex/Grid Container -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+            
+            <div style="background-color: #FFFFFF; padding: 24px 20px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06);">
+                <h4 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; margin: 0 0 8px 0;">Pillar 1 - Dharma Prasar: Digital Ashok Vatika Rath & Pathshalas</h4>
+                <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.65; margin: 0; text-align: justify;">Bringing VR Ramayana experience to 50 countries and starting Ramayana Pathshalas in schools globally.</p>
+            </div>
+
+            <div style="background-color: #FFFFFF; padding: 24px 20px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06);">
+                <h4 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; margin: 0 0 8px 0;">Pillar 2 - Seva Hi Sangathan: Sri Lanka Seva</h4>
+                <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.65; margin: 0; text-align: justify;">Temple Jirnoddhar at Sita Eliya, construction of Sita Dharmashala, free Sita Rasoi, and 108 Ashok Trees Vatika.</p>
+            </div>
+
+            <div style="background-color: #FFFFFF; padding: 24px 20px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06);">
+                <h4 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; margin: 0 0 8px 0;">Pillar 3 - Matri Mandali & Kutumb Prabodhan: Sita Shakti</h4>
+                <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.65; margin: 0; text-align: justify;">Empowering 1 Lakh daughters, running Sita Samvad Helpline, and Luv-Kush Sanskar Gurukul.</p>
+            </div>
+
+            <div style="background-color: #FFFFFF; padding: 24px 20px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06);">
+                <h4 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; margin: 0 0 8px 0;">Pillar 4 - Samrasta & Hindu Sangathan: Ramayana Corridor</h4>
+                <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.65; margin: 0; text-align: justify;">Connecting Ayodhya, Janakpur, and Ashok Vatika through annual Sita Navami Bharat Delegate Yatras.</p>
+            </div>
+
+            <div style="background-color: #FFFFFF; padding: 24px 20px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06);">
+                <h4 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; margin: 0 0 8px 0;">Pillar 5 - Sanskriti Raksha & Global Expansion</h4>
+                <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.92rem; color: #333333; line-height: 1.65; margin: 0; text-align: justify;">Connecting 15M NRI youth with VHPA, HSS UK, establishing Sita Clubs in 20 universities, and UNESCO heritage circuit development.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: All 15 Programmes -->
+<section style="background-color: #FDF6E3; padding: 60px 0; width: 100%; display: block;" id="programmes">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+        
+        <!-- Section Header -->
+        <div style="text-align: center; margin-bottom: 45px;">
+            <span style="color: #E67E00; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 6px;">OUR PROGRAMMES</span>
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.2rem; color: #E67E00; margin: 0; font-weight: 700;">15 Key Programmes & Initiatives</h2>
+        </div>
+
+        <!-- 2 Images Layout (Full Image Visible) -->
+        <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 45px; justify-content: center;">
+            <!-- Left Image Card -->
+            <figure style="flex: 1 1 450px; min-width: 300px; margin: 0; background: #FFF8E7; border-radius: 12px; overflow: hidden; border: 1px solid #FFE0B2; box-shadow: 0 4px 18px rgba(0,0,0,0.06);">
+                <img src="sita sakti.jpeg" alt="Global Ramayana Digital Heritage" style="width: 100%; height: auto; display: block;">
+                <figcaption style="padding: 14px 18px; text-align: center; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; color: #E67E00; background-color: #FFF8E7; border-top: 1px solid #FFE0B2;">
+                    Sita Shakti
+                </figcaption>
+            </figure>
+
+            <!-- Right Image Box -->
+            <figure style="flex: 1 1 450px; min-width: 300px; margin: 0; background: #FFF8E7; border-radius: 12px; overflow: hidden; border: 1px solid #FFE0B2; box-shadow: 0 4px 18px rgba(0,0,0,0.06);">
+                <img src="poshan.jpeg" alt="Sita Poshan & Ram-Rasoi" style="width: 100%; height: auto; display: block;">
+                <figcaption style="padding: 14px 18px; text-align: center; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; color: #E67E00; background-color: #FFF8E7; border-top: 1px solid #FFE0B2;">
+                    Sita Poshan & Ram-Rasoi
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- Programmes Grid: 5 Columns per Row -->
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
+            
+            <!-- Card 1 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-female" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">1. Sita Shakti</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Self Defence, character building workshops, Sita Samvad helpline, and safety kits for daughters.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Empowerment</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Self Defence</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-graduation-cap" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">2. Luv-Kush Gurukul</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Free Gurukul offering Ramayana Sanskar, English, Computers, digital classes, and scholarships.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Free Education</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Digital Class</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-notes-medical" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">3. Sita Arogyam</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Free health checkups, anemia awareness, Ayurveda, and medicinal herb conservation.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Health Camps</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Ayurveda</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-utensils" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">4. Ram-Rasoi</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Daily Annadanam for pilgrims and poor at Ayodhya, Janakpur, and Sita Eliya.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Annadanam</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Free Food</span>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-tree" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">5. Ashok Vatika</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Plantation and geo-tagging of sacred trees (Ashok, Peepal, Neem) along Ramayana Corridor.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Tree Plantation</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Geo-Tagging</span>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-hands-helping" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">6. Sita Swavalamban</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Skill training and self-reliance workshops for women in rural areas.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Self Reliance</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Skills</span>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-route" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">7. Ramayana Corridor Yatra</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Annual cultural Yatra on Sita Navami from Ayodhya via Janakpur to Sri Lanka.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Sita Navami Yatra</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">NRI Youth</span>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-vr-cardboard" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">8. Digital Ashok Vatika Rath</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">VR technology mobile museum providing immersive Ramayana experience in schools & colleges.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">VR Technology</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Digital Museum</span>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-faucet-drip" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">9. Sita Jal</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">RO Water Plant installations for clean drinking water in villages and temples.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Clean Water</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">RO Plants</span>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-dumbbell" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">10. Sita Shakti Open Gym</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Open gyms, yoga sheds, and self-defense spaces for women in rural bastis.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Fitness</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Open Gym</span>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-chalkboard-teacher" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">11. Smart Class</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Digital boards, projectors, computer labs, and Ramayana animations in government schools.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Smart Education</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Govt Schools</span>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-users-cog" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">12. Sita Club</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Youth leadership clubs in universities for Ramayana discussions and community service.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Youth Leadership</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Global Network</span>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-water" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">13. Sarovar Vikas</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Restoration of neglected ponds, deepening, ghat construction, and water conservation.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Pond Restoration</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Sita Sarovar</span>
+                </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-campground" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">14. Shri Ram Chaupal</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Evening village gatherings for Ramayana Katha, Bhajans, and social harmony meetings.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Samrasta</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Community Unity</span>
+                </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="margin-bottom: 12px;"><i class="fas fa-apple-alt" style="font-size: 1.5rem; color: #E67E00;"></i></div>
+                    <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">15. Sita Poshan</h3>
+                    <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Nutritional kits for pregnant women, milk/protein diet for children, and kitchen garden seeds.</p>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Maternal Nutrition</span>
+                    <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 15px; border: 1px solid #E67E00;">Poshan Kit</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- Section 3: 10 International Volunteer Projects -->
+<section style="background-color: #FFFFFF; padding: 60px 0; width: 100%; display: block;" id="international-projects">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+        
+        <!-- Section Header -->
+        <div style="text-align: center; margin-bottom: 35px;">
+            <span style="color: #E67E00; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 6px;">GLOBAL VOLUNTEER PROJECTS</span>
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.2rem; color: #E67E00; margin: 0; font-weight: 700;">10 International Volunteer Projects</h2>
+        </div>
+
+        <!-- TOP CENTER IMAGE (Left Image - VR) -->
+        <div style="display: flex; justify-content: center; margin-bottom: 45px;">
+            <div style="width: 100%; max-width: 600px; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.08);">
+                <div style="position: absolute; top: 12px; left: 12px; background: rgba(0, 0, 0, 0.75); color: #FFF; font-family: monospace; font-size: 0.8rem; padding: 5px 12px; border-radius: 6px; z-index: 2; border: 1px solid rgba(255,255,255,0.3);">
+        
+                </div>
+                <img src="vr.jpeg" alt="Digital Ashok Vatika Darshan" style="width: 100%; height: auto; display: block;">
+            </div>
+        </div>
+
+       <!-- 10 Projects Grid (5 per row with Fixed Comment/Tag Box Design) -->
+<div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;" class="projects-grid-container">
+    
+    <!-- Project 1 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-vr-cardboard" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 1: Digital Ashok Vatika Darshan</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Virtual Darshan of Ashok Vatika via VR / Metaverse and daily 1-minute Ramayana Shorts.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Metaverse &amp; VR</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Ramayana Shorts</span>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-users-cog" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 2: Sita Club - Global Network</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Establishing Sita Character Clubs in foreign universities with weekly discussions and service.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">NRI Youth</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">University Clubs</span>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-user-tie" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 3: Yuva Ramdoot</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Selecting 1 youth ambassador (aged 18-35) per country with an official certificate.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Global Ambassadors</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Soft Power</span>
+        </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-language" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 4: Ramayana Bhasha Sangam</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Translating Ramayana into 30 world languages along with audiobooks and comics.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">30 Languages</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">UNESCO Milestone</span>
+        </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-mobile-alt" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 5: Mandir Jodo Abhiyan App</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Connecting 1,000 global Ram/Sita/Hanuman temples on a mobile app with Live Darshan.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Temple App</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Live Darshan</span>
+        </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-globe-americas" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 6: Vishva Ramayana Mahotsav</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Annual World Ramayana Festival showcasing cultural performances from 50 nations.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Cultural Festival</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">50 Nations</span>
+        </div>
+    </div>
+
+    <!-- Project 7 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-book-reader" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 7: Ramayana Library Corner</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Establishing Ramayana Book Corners in 20 major foreign university libraries.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">University Libraries</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Research</span>
+        </div>
+    </div>
+
+    <!-- Project 8 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-film" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 8: Film &amp; Bhajan Competition</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Global digital contests for short films, animations, and devotional songs based on Ramayana.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Digital Media</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Youth Contests</span>
+        </div>
+    </div>
+
+    <!-- Project 9 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-seedling" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 9: Global Sita Tree Plantation</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Mobilizing NRI communities worldwide to plant Ashok and native trees.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Eco-Dharma</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Plantation Drive</span>
+        </div>
+    </div>
+
+    <!-- Project 10 -->
+    <div style="background-color: #FFFFFF; padding: 20px 16px; border-radius: 10px; border-left: 5px solid #E67E00; box-shadow: 0 4px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+            <div style="margin-bottom: 10px;"><i class="fas fa-landmark" style="font-size: 1.4rem; color: #E67E00;"></i></div>
+            <h3 style="color: #E67E00; font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; line-height: 1.3;">Project 10: UNESCO Heritage Circuit</h3>
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #333333; line-height: 1.5; margin: 0 0 16px 0; text-align: justify;">Preserving and documenting sacred Asian Ramayana sites as UNESCO World Heritage landmarks.</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">Heritage Protection</span>
+            <span style="background: #FFF8E7; color: #C66B00; font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 15px; border: 1px solid #E67E00; white-space: nowrap;">UNESCO</span>
+        </div>
+    </div>
+</div>
+
+<!-- Responsive Media Query -->
+<style>
+    @media (max-width: 1200px) {
+        .projects-grid-container {
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+    }
+    @media (max-width: 768px) {
+        .projects-grid-container {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+</style>
+        </div>
+
+        <!-- BOTTOM CENTER IMAGE (Right Image - Plantation) -->
+        <div style="display: flex; justify-content: center; margin-top: 45px; margin-bottom: 40px;">
+            <div style="width: 100%; max-width: 600px; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.08);">
+                <div style="position: absolute; top: 12px; left: 12px; background: rgba(0, 0, 0, 0.75); color: #FFF; font-family: monospace; font-size: 0.8rem; padding: 5px 12px; border-radius: 6px; z-index: 2; border: 1px solid rgba(255,255,255,0.3);">
+                
+                </div>
+                <img src="plantation.jpeg" alt="Global Sita Tree Plantation" style="width: 100%; height: auto; display: block;">
+            </div>
+        </div>
+
+        <!-- FCRA / Volunteer Notice Bar -->
+        <div style="background: linear-gradient(135deg, #FFF8E7 0%, #FFE6D5 100%); border-left: 5px solid #E67E00; padding: 18px 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;">
+            <p style="font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; margin: 0; color: #2C3E50; font-size: 0.95rem; font-weight: 600; line-height: 1.6;">
+                <i class="fas fa-info-circle" style="color: #E67E00; margin-right: 8px; font-size: 1.1rem;"></i>
+                <strong>Note:</strong> All 10 Projects are 100% Volunteer-Based, Zero Fund Transfer to India - Hence FCRA Not Applicable - Only Seva, Sanskar, Sanskriti.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Section: Gallery -->
+<section class="section-padding bg-light" id="gallery">
+    <div class="container">
+        <div class="section-title" style="text-align: center; margin-bottom: 30px;">
+            <span class="subtext">MEDIA & GALLERY</span>
+            <h2 id="gallery-heading">Our Seva in Pictures</h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 35px;">
+            <button id="btn-photos" onclick="selectGalleryView('photos')" style="padding: 10px 25px; border-radius: 25px; border: 2px solid var(--primary-saffron, #d9534f); background: var(--primary-saffron, #d9534f); color: white; font-weight: bold; cursor: pointer;">
+                <i class="fas fa-camera"></i> Photos
+            </button>
+            <button id="btn-media" onclick="selectGalleryView('media')" style="padding: 10px 25px; border-radius: 25px; border: 2px solid var(--primary-saffron, #d9534f); background: white; color: #333; font-weight: bold; cursor: pointer;">
+                <i class="fas fa-newspaper"></i> Media Articles
+            </button>
+        </div>
+
+       <!-- 1. PHOTOS GRID (Local Images Path Added) -->
+<div id="gallery-photos" style="display: block;">
+    <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+        
+        <!-- Gallery Card 1 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="sita amanna.jpg" alt="Sita Temple" style="width: 100%; height: 100%; object-fit: cover; display: block;" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;">HERITAGE SITE</span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Shri Sita Amman Temple</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">Historic site of Sita Eliya, Sri Lanka. Restoration work underway for Sita Temple and Dharmashala.</p>
+        </div>
+
+        <!-- Gallery Card 2 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="shri ram temple .jpeg" alt="Digital Rath VR" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='ashok vartika.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;"></span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Digital Ashok Vatika Rath</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">Shree Ram Temple in Rambodha, where we ttok blessing of bhagwan Ram and move forward in our Srilanka journy.</p>
+        </div>
+
+        <!-- Gallery Card 3 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="bhakta hanumaan.jpg" alt="Sita Shakti Workshop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='ram mandir.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;"></span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Shri bhakta hanuman temple,Ramboda</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">Hanumaan temple in Ramboda is a religious pilgrim where we took the blesssing of bangwan Hanumaan.</p>
+        </div>
+
+        <!-- Gallery Card 4 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 220px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="gita manishi.jpeg" alt="Swami Gyananand Ji Maharaj" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" onerror="this.onerror=null; this.src='ashok vartika.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;">SPIRITUAL LEADER</span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Swami Gyananand Ji Maharaj</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">Swami Gyananand Ji Maharaj (Gita Manishi), prominent spiritual leader and founder of GIEO Gita.</p>
+        </div>
+
+        <!-- Gallery Card 5 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="6.jpeg" alt="Sita Shakti Workshop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='ram mandir.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;"></span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">For Pran Pratishtha ceremony of the Mata Sita Mandir.</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">We brought the holy waters and soil of the Saryu River from Ayodhya,and bridal offerings (bhar saree) from Mata Sita’s maternal home, Mithila.</p>
+        </div>
+
+        <!-- Gallery Card 6 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="mandir puja.jpeg" alt="Sita Shakti Workshop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='ram mandir.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;"></span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Pran Pratishtha ceremony of the Mata Sita Mandir.</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">Shri Lal Krishna Ji (member of Parliament) performing puja for Mandir.</p>
+        </div>
+
+        <!-- Gallery Card 7 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="rath yatra.jpeg" alt="Sita Shakti Workshop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='ram mandir.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;"></span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Ramayan Rath Yatra</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">The profound civilizational bonds connecting Ayodhya-Janakpur, Mithila to Srilanka, honoring the eternal connection of Lord Rama and Mata Sita.</p>
+        </div>      
+
+        <!-- Gallery Card 8 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="ramcharitmanas.jpeg" alt="Sita Shakti Workshop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='ram mandir.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;"></span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Ramcharitmanas</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">We promoted our holy book Ramcharitmanas and its importance in every individual's life.</p>
+        </div>  
+        
+        <!-- Gallery Card 9 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="letter of appreciation.jpeg" alt="Sita Shakti Workshop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='ram mandir.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;"></span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Invitation and request letter from the Sri Seethai Amman Temple(Srilanka)</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">An official invitation and request letter from the Sri Seethai Amman Temple Paripalana Sabai to Shri Avanneesh Tripathi, seeking assistance to bring holy Saryu water, Sri Rama Padhuga, and rare Ramayan books.</p>
+        </div>
+
+        <!-- Gallery Card 10 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="token of love.jpeg" alt="Sita Shakti Workshop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='ram mandir.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;"></span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Accreditation from Srilanka</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">This is a heartfelt letter of accreditation issued by the Board of Trustees of the Shri Seethai Amman Shrine in Ashok Vatika, Sri Lanka, thanking Avanneesh Tripathi for his invaluable support during the holy re-consecration ceremony.</p>
+        </div>
+
+        <!-- Gallery Card 11 -->
+        <div class="media-card" style="background-color: #FFFDF7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-left: 5px solid #C37A0B; border-top: 1px solid #E5C383; border-right: 1px solid #E5C383; border-bottom: 1px solid #E5C383;">
+            <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 8px; margin-bottom: 12px; cursor: pointer;">
+                <img src="ticket.jpeg" alt="Sita Shakti Workshop" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='ram mandir.jpg';" onclick="openLightbox(this.src, this.alt)">
+            </div>
+            <span style="font-size: 0.8rem; color: #A0522D; font-weight: 700; text-transform: uppercase;"></span>
+            <h3 style="font-size: 1.1rem; margin: 6px 0; color: #8B4513; font-family: 'Cinzel', serif;">Shree Seethai Amman ticket</h3>
+            <p style="font-size: 0.88rem; color: #4A2E16; margin: 0; line-height: 1.5;">Special Commemorative First Day Cover and postal stamp issued by Sri Lanka Post to mark the sacred Ramayana Trail journey for devotees visiting the historic Shree Seethai Amman.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 2. MEDIA ARTICLES GRID -->
+<div id="gallery-media" style="display: none;">
+    <div class="media-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        
+        <!-- Media Article 1 -->
+        <div class="media-card" style="background: #fff; padding: 15px; border-radius: 8px; border-left: 5px solid var(--primary-saffron, #d9534f); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="media article 1.jpeg" alt="News Article" style="width: 100%; border-radius: 6px; margin-bottom: 10px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+            <span style="background: #fff3e6; color: #d9534f; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;"></span>
+            <h4 style="margin: 10px 0;">importance of Bhagwat geeta in every individual's life</h4>
+        </div>
+
+        <!-- Media Article 2 -->
+        <div class="media-card" style="background: #fff; padding: 15px; border-radius: 8px; border-left: 5px solid var(--primary-saffron, #d9534f); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="article .jpeg" alt="News Article" style="width: 100%; border-radius: 6px; margin-bottom: 10px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+            <span style="background: #fff3e6; color: #d9534f; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Srilankan Airlines</span>
+            <h4 style="margin: 10px 0;">The Rmnayan Trail from New Delhi to Srilanka</h4>
+        </div>
+        
+        <!-- Media Article 3 -->
+        <div class="media-card" style="background: #fff; padding: 15px; border-radius: 8px; border-left: 5px solid var(--primary-saffron, #d9534f); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="article 2.jpeg" alt="News Article" style="width: 100%; border-radius: 6px; margin-bottom: 10px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+            <span style="background: #fff3e6; color: #d9534f; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;"></span>
+            <h4 style="margin: 10px 0;">words on the importane of bhagwat geeta</h4>
+        </div>
+        
+        <!-- Media Article 4 -->
+        <div class="media-card" style="background: #fff; padding: 15px; border-radius: 8px; border-left: 5px solid var(--primary-saffron, #d9534f); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="lanka news.jpeg" alt="News Article" style="width: 100%; border-radius: 6px; margin-bottom: 10px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+            <span style="background: #fff3e6; color: #d9534f; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;"> NDTV Lanka </span>
+            <h4 style="margin: 10px 0;">Media coverage in Srilanka.</h4>
+        </div>
+
+        <!-- Media Article 5 -->
+        <div class="media-card" style="background: #fff; padding: 15px; border-radius: 8px; border-left: 5px solid var(--primary-saffron, #d9534f); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="ndtv srilanka.jpeg" alt="News Article" style="width: 100%; border-radius: 6px; margin-bottom: 10px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+            <span style="background: #fff3e6; color: #d9534f; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">NDTV Lanka</span>
+            <h4 style="margin: 10px 0;">SRILANKA media coverage.</h4>
+        </div>
+
+        <!-- Media Article 6 -->
+        <div class="media-card" style="background: #fff; padding: 15px; border-radius: 8px; border-left: 5px solid var(--primary-saffron, #d9534f); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="media article 5.jpeg" alt="News Article" style="width: 100%; border-radius: 6px; margin-bottom: 10px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+            <span style="background: #fff3e6; color: #d9534f; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">City Supports </span>
+            <h4 style="margin: 10px 0;">Srilanka mein Maa Sita ki murti ka Pran Prathisthan</h4>
+        </div>
+
+        <!-- Media Article 7 -->
+        <div class="media-card" style="background: #fff; padding: 15px; border-radius: 8px; border-left: 5px solid var(--primary-saffron, #d9534f); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="media article 6.jpeg" alt="News Article" style="width: 100%; border-radius: 6px; margin-bottom: 10px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+            <span style="background: #fff3e6; color: #d9534f; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Kanpur Newspaper</span>
+            <h4 style="margin: 10px 0;">ramayan lesson about humanity and human nature.</h4>
+        </div>
+    </div>
+</div>
+
+<!-- LIGHTBOX MODAL CONTAINER -->
+<div id="imageLightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); z-index: 9999; justify-content: center; align-items: center; backdrop-filter: blur(5px);" onclick="closeLightbox(event)">
+    <span style="position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 10000;" onclick="closeLightboxDirect()">&times;</span>
+    <img id="lightboxImg" src="" alt="Full View" style="max-width: 90%; max-height: 90vh; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); object-fit: contain;">
+</div>
+
+<!-- JAVASCRIPT FOR LIGHTBOX -->
+<script>
+    function openLightbox(src, alt) {
+        var lightbox = document.getElementById('imageLightbox');
+        var lightboxImg = document.getElementById('lightboxImg');
+        lightboxImg.src = src;
+        lightboxImg.alt = alt;
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevents background scrolling
+    }
+
+    function closeLightbox(event) {
+        // Close only if clicking the background overlay itself
+        if (event.target.id === 'imageLightbox') {
+            closeLightboxDirect();
+        }
+    }
+
+    function closeLightboxDirect() {
+        var lightbox = document.getElementById('imageLightbox');
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }
+
+    // Close on Escape key press
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightboxDirect();
+        }
+    });
+</script>
+<!-- Restyled Code with Proper Spacing & Alignment -->
+<style>
+    :root {
+        --primary-saffron: #ff8c00;
+        --secondary-saffron: #e07b00;
+        --accent-yellow: #ffff00;
+        --text-white: #ffffff;
+    }
+
+    /* Section & Container - Upar gap, neeche bilkul gap nahi */
+    .section-padding-redefined {
+        background-color: var(--primary-saffron);
+        color: var(--text-white);
+        padding: 70px 0 0 0; /* Sirf upar padding hai, neeche 0 */
+        font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif;
+    }
+
+    .container-redefined {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .section-title-redefined {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .section-title-redefined .subtext {
+        color: var(--accent-yellow);
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .section-title-redefined h2 {
+        color: var(--accent-yellow);
+        font-family: 'Cinzel', serif;
+        font-size: 2.2rem;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    /* Info Card Design - Full responsive & clean margins */
+    .info-card-redefined {
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        color: var(--text-white);
+    }
+
+    .info-card-redefined p {
+        margin: 10px 0;
+        color: var(--text-white);
+        font-size: 0.98rem;
+    }
+
+    .info-card-redefined p i {
+        color: var(--accent-yellow);
+        margin-right: 8px;
+    }
+
+    .info-card-redefined a {
+        color: var(--text-white);
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+        transition: all 0.2s ease;
+    }
+
+    .info-card-redefined a:hover {
+        color: var(--accent-yellow);
+        border-bottom-color: var(--accent-yellow);
+    }
+
+    /* Action Buttons Container */
+    .action-btn-group {
+        margin: 30px 0 0 0;
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 50px; /* Section ke andar buttons ke baad space taaki footer se touch na ho */
+    }
+
+    .btn-primary-redefined {
+        background: var(--text-white);
+        color: var(--primary-saffron);
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 13px 28px;
+        border-radius: 30px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .btn-primary-redefined:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+        background: #fff8e7;
+    }
+
+    /* Footer Styling - Section ke sath bilkul chipka hua (no gap) */
+    .footer-redefined {
+        background-color: var(--secondary-saffron);
+        color: var(--text-white);
+        padding: 25px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+    }
+
+    /* Modal Overlay & Slide Drawers */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+        z-index: 9999;
+        display: none;
+        justify-content: flex-end;
+    }
+
+    .modal-overlay.active {
+        display: flex;
+    }
+
+    .slide-panel {
+        width: 100%;
+        max-width: 440px;
+        height: 100%;
+        box-sizing: border-box;
+        overflow-y: auto;
+        padding: 25px;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 15px;
+    }
+
+    .modal-header h3 {
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    .close-btn {
+        background: transparent;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        line-height: 1;
+        opacity: 0.85;
+    }
+
+    .close-btn:hover {
+        opacity: 1;
+    }
+
+    .modal-subtitle {
+        font-size: 0.88rem;
+        margin: 10px 0 20px 0;
+        line-height: 1.5;
+    }
+
+    /* Volunteer Form Elements */
+    .volunteer-form .form-group {
+        margin-bottom: 16px;
+    }
+
+    .volunteer-form label {
+        display: block;
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
+    }
+
+    .volunteer-form label i {
+        margin-right: 4px;
+        color: var(--accent-yellow);
+    }
+
+    .volunteer-form input,
+    .volunteer-form select,
+    .volunteer-form textarea {
+        width: 100%;
+        padding: 11px 14px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.95);
+        color: #222;
+        font-size: 0.9rem;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    .volunteer-form input:focus,
+    .volunteer-form select:focus,
+    .volunteer-form textarea:focus {
+        background: #ffffff;
+        box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.4);
+    }
+
+    .form-row {
+        display: flex;
+        gap: 12px;
+    }
+
+    .form-row .form-group {
+        flex: 1;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        margin-top: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: transform 0.2s ease;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Chatbot Panel Refinements */
+    .chatbot-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .chat-box {
+        flex: 1;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-right: 4px;
+        margin-bottom: 15px;
+    }
+
+    .chat-msg {
+        max-width: 85%;
+        padding: 12px 15px;
+        border-radius: 12px;
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .bot-msg {
+        background: #ffffff;
+        color: #333333;
+        align-self: flex-start;
+        border: 1px solid #ffe0cc;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .user-msg {
+        background: var(--primary-saffron);
+        color: #ffffff;
+        align-self: flex-end;
+    }
+
+    .chat-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 8px;
+    }
+
+    .chat-chips button {
+        background: #ffffff;
+        color: var(--secondary-saffron);
+        border: 1px solid var(--primary-saffron);
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .chat-chips button:hover {
+        background: var(--primary-saffron);
+        color: #ffffff;
+    }
+
+    .chat-input-area {
+        display: flex;
+        gap: 8px;
+        padding-top: 12px;
+        border-top: 1px solid #eee;
+    }
+
+    .chat-input-area input {
+        flex: 1;
+        padding: 10px 14px;
+        border-radius: 20px;
+        border: 1px solid #dddddd;
+        outline: none;
+        font-size: 0.9rem;
+    }
+
+    .chat-input-area button {
+        color: #ffffff;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<!-- Section: Contact Us -->
+<section class="section-padding-redefined" id="contact">
+    <div class="container-redefined">
+        <div class="section-title-redefined">
+            <span class="subtext">GET IN TOUCH</span>
+            <h2>Contact Us &amp; Support</h2>
+        </div> 
+        
+        <div class="info-card-redefined">
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Headquarters:</strong> <span>Greater Noida / Delhi NCR, Bharat</span></p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:contact@ashokvatika.org">contact@ashokvatika.org</a></p>
+            <p><i class="fas fa-globe"></i> <strong>Website:</strong> <a href="http://www.ashokvatika.org" target="_blank" rel="noopener">www.ashokvatika.org</a></p>
+        </div>
+
+        <div class="action-btn-group">
+            <!-- Ask Questions Button -->
+            <button onclick="openChatbot()" class="btn-primary-redefined">
+                <i class="fas fa-comments"></i> Ask Questions 
+            </button>
+            
+            <!-- Volunteer Form Button -->
+            <button onclick="openVolunteerModal()" class="btn-primary-redefined">
+                <i class="fas fa-user-plus"></i> Join as Volunteer
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-redefined">
+    <div class="container-redefined" style="text-align: center;">
+        <p style="margin: 0; font-weight: 500;">&copy; 2026 Ashok Vatika Ramayana Foundation. All Rights Reserved.</p>
+        <p class="motto" style="margin-top: 6px; font-style: italic; color: #ffe6d5; margin-bottom: 0;">Mata Sita Se Sanskar • Ramayan Se Samadhan • Sewa Se Vishva Kalyan</p>
+    </div>
+</footer>
+
+<!-- 1. VOLUNTEER REGISTRATION DRAWER -->
+<div id="volunteerModalOverlay" class="modal-overlay" onclick="closeVolunteerModal(event)">
+    <div class="slide-panel" style="background: linear-gradient(180deg, #ff8c00 0%, #e07b00 100%); color: #ffffff;" onclick="event.stopPropagation()">
+        <div class="modal-header" style="border-bottom: 2px solid rgba(255,255,255,0.2);">
+            <h3 style="color: #ffffff;"><i class="fas fa-hands-helping"></i> Volunteer Registration</h3>
+            <button class="close-btn" onclick="closeVolunteerModal(true)" style="color: #ffffff;">&times;</button>
+        </div>
+        <p class="modal-subtitle" style="color: #ffe6d5;">Apni details bharein aur Ashok Vatika Ramayana Foundation ki seva se judein.</p>
+        
+        <form class="volunteer-form" onsubmit="handleVolunteerSubmit(event)">
+            <div class="form-group">
+                <label for="v-name"><i class="fas fa-user"></i> Full Name *</label>
+                <input type="text" id="v-name" required placeholder="Apna pura naam likhein">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="v-age"><i class="fas fa-calendar-alt"></i> Age *</label>
+                    <input type="number" id="v-age" min="10" max="100" required placeholder="Umar">
+                </div>
+                <div class="form-group">
+                    <label for="v-gender"><i class="fas fa-venus-mars"></i> Gender *</label>
+                    <select id="v-gender" required>
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="v-phone"><i class="fas fa-phone"></i> Phone / WhatsApp No. *</label>
+                <input type="tel" id="v-phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+            </div>
+
+            <div class="form-group">
+                <label for="v-email"><i class="fas fa-envelope"></i> Email Address *</label>
+                <input type="email" id="v-email" required placeholder="example@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="v-address"><i class="fas fa-map-marker-alt"></i> Complete Address *</label>
+                <textarea id="v-address" rows="3" required placeholder="Ghar ka address, shahar aur rajya..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="v-interest"><i class="fas fa-heart"></i> Area of Interest</label>
+                <select id="v-interest">
+                    <option value="Sita Shakti">Sita Shakti / Women Empowerment</option>
+                    <option value="Ashok Vatika">Ashok Vatika Tree Plantation</option>
+                    <option value="Ramayana Pathshala">Ramayana Pathshala Teaching</option>
+                    <option value="Digital VR Rath">Digital VR Rath &amp; Tech Support</option>
+                    <option value="General Seva">General Seva / Volunteer</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn" style="background: #ffffff; color: var(--primary-saffron, #ff8c00); font-weight: bold; border: none;">
+                Submit &amp; Sign In <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- 2. ASK QUESTIONS DRAWER -->
+<div id="chatbotModalOverlay" class="modal-overlay" onclick="closeChatbot(event)">
+    <div class="slide-panel chatbot-panel" style="background: #fff8f5;" onclick="event.stopPropagation()">
+        <div style="margin: -25px -25px 15px -25px;">
+            <div class="modal-header" style="background: var(--primary-saffron, #ff8c00); padding: 18px 20px;">
+                <h3 style="color: #ffffff;"><i class="fas fa-robot"></i> Seva Assistant</h3>
+                <button class="close-btn" onclick="closeChatbot(true)" style="color: #ffffff;">&times;</button>
+            </div>
+        </div>
+        
+        <!-- Chat Area -->
+        <div class="chat-box" id="chatBox">
+            <div class="chat-msg bot-msg">
+                <strong>Namaste! 🙏</strong><br>
+                Aap Ashok Vatika Ramayana Foundation ke bare me kya janana chahte hain? Nichhe diye gaye sawalon par click karein ya apna sawal likhein.
+            </div>
+            
+            <!-- Quick Chips -->
+            <div class="chat-chips">
+                <button onclick="sendQuickQuery('Aapke programmes kya hain?')">Programmes</button>
+                <button onclick="sendQuickQuery('Headquarters kahan hai?')">Headquarters</button>
+                <button onclick="sendQuickQuery('Sita Shakti initiative kya hai?')">Others</button>
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Apna sawal yahan likhein..." onkeypress="handleChatKeyPress(event)">
+            <button onclick="sendChatMessage()" style="background: var(--primary-saffron, #ff8c00);"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+/* Volunteer Modal Functions */
+function openVolunteerModal() {
+    document.getElementById('volunteerModalOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeVolunteerModal(event) {
+    if (event === true || event.target.id === 'volunteerModalOverlay') {
+        document.getElementById('volunteerModalOverlay').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+function handleVolunteerSubmit(e) {
+    e.preventDefault();
+    alert('Dhanyawad! Aapka registration submit ho gaya hai.');
+    closeVolunteerModal(true);
+}
+
+/* Chatbot Functions */
+function openChatbot() {
+    document.getElementById('chatbotModalOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeChatbot(event) {
+    if (event === true || event.target.id === 'chatbotModalOverlay') {
+        document.getElementById('chatbotModalOverlay').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function handleChatKeyPress(e) {
+    if(e.key === 'Enter') sendChatMessage();
+}
+
+function sendChatMessage() {
+    const input = document.getElementById('chatInput');
+    const msg = input.value.trim();
+    if(!msg) return;
+    
+    appendUserMsg(msg);
+    input.value = '';
+    
+    setTimeout(() => {
+        getBotResponse(msg);
+    }, 400);
+}
+
+function sendQuickQuery(queryText) {
+    appendUserMsg(queryText);
+    setTimeout(() => {
+        getBotResponse(queryText);
+    }, 400);
+}
+
+function appendUserMsg(text) {
+    const chatBox = document.getElementById('chatBox');
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'chat-msg user-msg';
+    msgDiv.innerText = text;
+    chatBox.appendChild(msgDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function getBotResponse(userMsg) {
+    const chatBox = document.getElementById('chatBox');
+    const botDiv = document.createElement('div');
+    botDiv.className = 'chat-msg bot-msg';
+    
+    let text = userMsg.toLowerCase();
+    let reply = "Aapke is sawal ke liye aap hamare Email: contact@ashokvatika.org par sampark kar sakte hain.";
+
+    if(text.includes('programme') || text.includes('program')) {
+        reply = "Hamare 15 mukhya programmes hain, jaise Sita Shakti, Luv-Kush Gurukul, Ashok Vatika Plantation, aur Digital VR Rath.";
+    } else if(text.includes('headquarters') || text.includes('address') || text.includes('kahan')) {
+        reply = "Hamara Headquarters Greater Noida / Delhi NCR, Bharat me sthit hai.";
+    } else if(text.includes('sita shakti')) {
+        reply = "Sita Shakti initiative ke tahet 1 Lakh betiyo ko self-defense, character building aur safety helpline se joda ja raha hai.";
+    } else if(text.includes('volunteer') || text.includes('join')) {
+        reply = "Aap 'Join as Volunteer' button par click karke form bhar sakte hain!";
+    }
+
+    botDiv.innerHTML = reply;
+    chatBox.appendChild(botDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+</script>
+ <script>
+function selectGalleryView(viewType) {
+    var photosDiv = document.getElementById('gallery-photos');
+    var mediaDiv = document.getElementById('gallery-media');
+    var heading = document.getElementById('gallery-heading');
+    var btnPhotos = document.getElementById('btn-photos');
+    var btnMedia = document.getElementById('btn-media');
+
+    if (viewType === 'photos') {
+        // Show Photos, Hide Media
+        photosDiv.style.display = 'block';
+        mediaDiv.style.display = 'none';
+        
+        if (heading) heading.innerText = "Our Seva in Pictures";
+        
+        // Button Colors Toggle
+        btnPhotos.style.background = "var(--primary-saffron, #d9534f)";
+        btnPhotos.style.color = "white";
+        btnMedia.style.background = "white";
+        btnMedia.style.color = "#333";
+    } 
+    else if (viewType === 'media') {
+        // Hide Photos, Show Media
+        photosDiv.style.display = 'none';
+        mediaDiv.style.display = 'block';
+        
+        if (heading) heading.innerText = "Media & Press Coverage";
+        
+        // Button Colors Toggle
+        btnMedia.style.background = "var(--primary-saffron, #d9534f)";
+        btnMedia.style.color = "white";
+        btnPhotos.style.background = "white";
+        btnPhotos.style.color = "#333";
+    }
+
+    // Smooth Scroll to Section
+    var gallerySec = document.getElementById('gallery');
+    if (gallerySec) {
+        gallerySec.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+</script>
+<script>
+// 1. Gallery Dropdown Toggle on Click
+function toggleGalleryDropdown(event) {
+    event.stopPropagation();
+    const dropdown = document.getElementById('galleryDropdown');
+    dropdown.classList.toggle('open');
+}
+
+// 2. Option Click Handler (Photos or Media)
+function handleNavGalleryClick(viewType) {
+    // Dropdown menu close kar do
+    document.getElementById('galleryDropdown').classList.remove('open');
+    
+    // Core gallery view filter function call karein
+    if (typeof selectGalleryView === 'function') {
+        selectGalleryView(viewType);
+    }
+}
+
+// 3. Screen par kahin aur click hone par dropdown automatic close ho jaye
+document.addEventListener('click', function(e) {
+    const dropdown = document.getElementById('galleryDropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+    }
+});
+</script>
+<!-- Slideshow JavaScript -->
+<script>
+  let slideIndex = 0;
+  let autoSlideTimer;
+
+  // Start Automatic Slideshow
+  startSlideshow();
+
+  function startSlideshow() {
+    let slides = document.getElementsByClassName("slide-item");
+    let dots = document.getElementsByClassName("dot-item");
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active-dot");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active-dot");
+
+    // Change image every 3.5 seconds
+    autoSlideTimer = setTimeout(startSlideshow, 3500);
+  }
+
+  // Next / Previous controls
+  function moveSlide(n) {
+    clearTimeout(autoSlideTimer);
+    let slides = document.getElementsByClassName("slide-item");
+    slideIndex += n - 1;
+    if (slideIndex < 0) { slideIndex = slides.length - 1; }
+    startSlideshow();
+  }
+
+  // Dot selection control
+  function setSlide(n) {
+    clearTimeout(autoSlideTimer);
+    slideIndex = n - 1;
+    startSlideshow();
+  }
+  function toggleGalleryDropdown(event) {
+    event.stopPropagation();
+    const menu = document.getElementById('galleryDropdownMenu');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+}
+
+function handleNavGalleryClick(type) {
+    const photosSection = document.getElementById('gallery-photos');
+    const mediaSection = document.getElementById('gallery-media');
+    const menu = document.getElementById('galleryDropdownMenu');
+
+    if (type === 'photos') {
+        if (photosSection) photosSection.style.display = 'block';
+        if (mediaSection) mediaSection.style.display = 'none';
+    } else if (type === 'media') {
+        if (photosSection) photosSection.style.display = 'none';
+        if (mediaSection) mediaSection.style.display = 'block';
+    }
+
+    if (menu) {
+        menu.style.display = 'none';
+    }
+}
+
+// Bahar click karne par menu band ho jaye
+window.addEventListener('click', function() {
+    const menu = document.getElementById('galleryDropdownMenu');
+    if (menu) {
+        menu.style.display = 'none';
+    }
+});
+</script>
+</body>
+</html>

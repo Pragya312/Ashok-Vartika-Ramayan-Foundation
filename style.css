@@ -1,0 +1,689 @@
+/* --- Global Reset & Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-brown: #8B4513;
+    --dark-brown: #2C1A11;
+    --gold-accent: #D4AF37;
+    --btn-gold: #C07D2A;
+    --light-bg: #FCF9F2;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --border-color: #E2D9C8;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--btn-gold);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #a3671f;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-submit {
+    background-color: var(--btn-gold);
+    color: #ffffff;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.btn-subscribe {
+    background-color: var(--btn-gold);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* --- Navbar & Logo Styling --- */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(224, 59, 9, 0.322);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.custom-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    
+    transform: scale(1.3);         
+    transform-origin: left center; 
+}
+
+.logo-text h2 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--primary-brown);
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.logo-text span {
+    font-size: 0.65rem;
+    color: var(--btn-gold);
+    letter-spacing: 1.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a.active, 
+.nav-links a:hover {
+    color: var(--primary-brown);
+    border-bottom: 2px solid var(--primary-brown);
+}
+
+/* Translate Switcher Container */
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #d36217;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
+/* --- Hero Banner Section --- */
+    .hero {
+    /* Clear Background Setup */
+    background-image: url('hero-bg.jpg'); /* Apni image ka path ya URL daalein */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* Height and Width */
+    min-height: 60vh;
+    width: 100%;
+
+    /* Blurry effects remove karne ke liye filters OFF */
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Overlays ko completely disable karne ke liye */
+.hero::before,
+.hero::after {
+    display: none !important;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #f16f24;
+}
+
+.hero-content .description {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    font-size: 0.95rem;
+    color: #f75830;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(168, 16, 5, 0.432);
+    backdrop-filter: blur(5px);
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(223, 43, 12, 0.39);
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.stat-badge i {
+    font-size: 1.2rem;
+    color: var(--gold-accent);
+}
+
+/* --- Section Headings --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title .subtext {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--btn-gold);
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--dark-brown);
+    margin-top: 5px;
+}
+
+/* --- About Us Section --- */
+.about {
+    padding: 60px 0;
+}
+/* Layout ko side-by-side karne ke liye */
+.about-wrapper {
+    display: flex;
+    align-items: center; /* Vertical alignment center karne ke liye */
+    justify-content: space-between;
+    gap: 30px; /* Text aur Photo ke beech ka gap */
+}
+
+/* Dono sides ko 50-50% width dene ke liye */
+.about-content, 
+.about-image {
+    flex: 1;
+}
+.about-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;        /* Height choti karne ke liye fixed height (Aap 350px ya 450px bhi rakh sakte hain) */
+    max-height: 500px;    /* Extra badi hone se rokne ke liye */
+    object-fit: cover;    /* Image pichkegi nahi, poori fit hogi */
+    border-radius: 8px;
+}
+.about {
+    background-color: #FF9933; /* Saffron Orange */
+    color: #ffffff;            /* Pure section ka text white ho jayega readable rehne ke liye */
+    padding: 60px 0;           /* Top-bottom padding */
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 850px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* Modal Overlay Background */
+.modal-overlay {
+    display: none; /* Initially Hidden */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background effect */
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+
+/* Modal Slide Box */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: slideDown 0.4s ease-out;
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close Button (X) */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #b3391b;
+}
+
+/* Modal Title */
+.modal-header h2 {
+    color: #b3391b;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 5px;
+}
+
+.modal-header p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+/* Image ko responsive banane ke liye */
+ .about-image img {
+    width: 100%;
+    max-height: 600px; /* Aap ise apne hisaab se 500px, 600px, ya 700px kar sakte hain */
+    height: auto;      /* Aspect ratio maintain rakhega */
+    object-fit: contain; /* Isse photo bina cut hue puri dikhegi */
+    border-radius: 8px; /* Optional */
+}
+
+/* Mobile responsive ke liye (choti screen pr photo text ke neeche aa jayegi) */
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column;
+    }
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.info-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card-header .icon {
+    color: var(--btn-gold);
+    font-size: 1.2rem;
+}
+
+.card-header h3 {
+    font-family: var(--font-heading);
+    color: var(--dark-brown);
+}
+
+.tags-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #f4ece1;
+    color: var(--dark-brown);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.about-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Programmes Section --- */
+.programmes {
+    padding: 60px 0;
+    background-color: #f8f4ec;
+}
+
+.programmes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.programme-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-top {
+    padding: 25px;
+}
+
+.prog-icon {
+    background: #f4ece1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--btn-gold);
+    margin-bottom: 15px;
+}
+
+.programme-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--dark-brown);
+}
+
+.programme-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.prog-tags span {
+    display: inline-block;
+    background: #f4ece1;
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: var(--dark-brown);
+}
+
+.card-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background: linear-gradient(135deg, #d38b37 0%, #b86e24 100%);
+    padding: 50px 0 80px;
+}
+
+.light-text .subtext {
+    color: #ffffff;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-info, 
+.contact-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.contact-info h3, 
+.contact-form h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+    color: var(--dark-brown);
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.info-item i {
+    color: var(--btn-gold);
+    margin-top: 5px;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    background: var(--btn-gold);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    outline: none;
+    font-family: inherit;
+}
+
+/* --- Footer Section --- */
+.footer {
+    background-color: var(--dark-brown);
+    color: #d1c7bd;
+    padding: 50px 0 20px;
+    font-size: 0.85rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.logo-text.light h3 {
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul a {
+    color: #d1c7bd;
+    text-decoration: none;
+}
+
+.footer-col ul a:hover {
+    color: var(--gold-accent);
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.newsletter-form input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 100%;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 992px) {
+    .about-grid, 
+    .contact-wrapper { 
+        grid-template-columns: 1fr; 
+    }
+    .programmes-grid { 
+        grid-template-columns: 1fr 1fr; 
+    }
+    .footer-grid { 
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 600px) {
+    .programmes-grid, 
+    .footer-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .hero-content h1 { 
+        font-size: 2rem; 
+    }
+    .nav-links { 
+        display: none; 
+    }
+}
